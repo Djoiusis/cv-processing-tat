@@ -1,0 +1,489 @@
+2024-11-03 19:58:26,670 - INFO - PDF text extracted successfully.
+2024-11-03 19:58:32,094 - INFO - Data successfully structured by AI.
+2024-11-03 19:58:32,100 - INFO - Structured data saved to output_data.json.
+2024-11-03 19:58:32,311 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-03 20:01:24,424 - INFO - PDF text extracted successfully.
+2024-11-03 20:01:31,833 - INFO - Data successfully structured by AI.
+2024-11-03 20:01:31,848 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:01:32,114 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-03 20:02:50,184 - INFO - PDF text extracted successfully.
+2024-11-03 20:03:00,434 - INFO - Data successfully structured by AI.
+2024-11-03 20:03:00,446 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:03:00,584 - ERROR - Error generating CV: Unexpected end of template. Jinja was looking for the following tags: 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+2024-11-03 20:03:28,870 - INFO - PDF text extracted successfully.
+2024-11-03 20:03:36,117 - INFO - Data successfully structured by AI.
+2024-11-03 20:03:36,128 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:03:36,212 - ERROR - Error generating CV: Unexpected end of template. Jinja was looking for the following tags: 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+2024-11-03 20:03:58,909 - INFO - PDF text extracted successfully.
+2024-11-03 20:04:06,076 - INFO - Data successfully structured by AI.
+2024-11-03 20:04:06,090 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:04:06,185 - ERROR - Error generating CV: Encountered unknown tag 'endfor'.
+2024-11-03 20:05:05,400 - INFO - PDF text extracted successfully.
+2024-11-03 20:05:12,905 - INFO - Data successfully structured by AI.
+2024-11-03 20:05:12,919 - ERROR - JSON decoding error: Illegal trailing comma before end of array: line 73 column 71 (char 3128)
+2024-11-03 20:05:20,068 - INFO - Data successfully structured by AI.
+2024-11-03 20:05:20,092 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:05:20,197 - ERROR - Error generating CV: Encountered unknown tag 'endfor'.
+2024-11-03 20:06:04,234 - INFO - PDF text extracted successfully.
+2024-11-03 20:06:16,333 - INFO - Data successfully structured by AI.
+2024-11-03 20:06:16,344 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:06:16,470 - ERROR - Error generating CV: Encountered unknown tag 'endfor'.
+2024-11-03 20:07:52,619 - INFO - PDF text extracted successfully.
+2024-11-03 20:08:44,299 - ERROR - An unexpected error occurred while structuring data with AI: Error communicating with OpenAI: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))
+2024-11-03 20:08:44,299 - ERROR - Failed to structure data with AI. Exiting.
+2024-11-03 20:09:05,939 - INFO - PDF text extracted successfully.
+2024-11-03 20:09:12,229 - INFO - Data successfully structured by AI.
+2024-11-03 20:09:12,247 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:09:12,340 - ERROR - Error generating CV: Encountered unknown tag 'endfor'.
+2024-11-03 20:09:39,048 - INFO - PDF text extracted successfully.
+2024-11-03 20:09:47,121 - INFO - Data successfully structured by AI.
+2024-11-03 20:09:47,140 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:09:47,222 - ERROR - Error generating CV: Encountered unknown tag 'endfor'.
+2024-11-03 20:10:51,438 - INFO - PDF text extracted successfully.
+2024-11-03 20:11:02,680 - INFO - Data successfully structured by AI.
+2024-11-03 20:11:02,693 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:11:02,776 - ERROR - Error generating CV: Encountered unknown tag 'endfor'.
+2024-11-03 20:13:11,831 - INFO - PDF text extracted successfully.
+2024-11-03 20:13:23,555 - INFO - Data successfully structured by AI.
+2024-11-03 20:13:23,569 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:13:23,660 - ERROR - Error generating CV: Encountered unknown tag 'endfor'.
+2024-11-03 20:14:07,196 - INFO - PDF text extracted successfully.
+2024-11-03 20:14:14,322 - INFO - Data successfully structured by AI.
+2024-11-03 20:14:14,343 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:14:14,434 - ERROR - Error generating CV: Encountered unknown tag 'endfor'.
+2024-11-03 20:14:55,223 - INFO - PDF text extracted successfully.
+2024-11-03 20:15:07,999 - INFO - Data successfully structured by AI.
+2024-11-03 20:15:08,017 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:15:08,117 - ERROR - Error generating CV: Encountered unknown tag 'endfor'.
+2024-11-03 20:21:25,399 - INFO - PDF text extracted successfully.
+2024-11-03 20:21:32,134 - INFO - Data successfully structured by AI.
+2024-11-03 20:21:32,150 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:21:32,235 - ERROR - Error generating CV: Encountered unknown tag 'endfor'.
+2024-11-03 20:22:05,676 - INFO - PDF text extracted successfully.
+2024-11-03 20:22:13,312 - INFO - Data successfully structured by AI.
+2024-11-03 20:22:13,327 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:22:13,411 - ERROR - Error generating CV: Encountered unknown tag 'endfor'.
+2024-11-03 20:23:42,585 - INFO - PDF text extracted successfully.
+2024-11-03 20:23:50,878 - INFO - Data successfully structured by AI.
+2024-11-03 20:23:50,894 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:23:51,164 - ERROR - Error generating CV: Encountered unknown tag 'endfor'.
+2024-11-03 20:26:26,030 - INFO - PDF text extracted successfully.
+2024-11-03 20:26:30,586 - INFO - Data successfully structured by AI.
+2024-11-03 20:26:30,596 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:26:30,829 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-03 20:26:54,006 - INFO - PDF text extracted successfully.
+2024-11-03 20:27:01,264 - INFO - Data successfully structured by AI.
+2024-11-03 20:27:01,274 - INFO - Structured data saved to output_data.json.
+2024-11-03 20:27:01,506 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-05 11:44:26,994 - INFO - PDF text extracted successfully.
+2024-11-05 11:44:34,219 - INFO - Data successfully structured by AI.
+2024-11-05 11:44:34,244 - INFO - Structured data saved to output_data.json.
+2024-11-05 11:44:34,245 - ERROR - Template file not found at C:/Users/karim/Downloads/CV/CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet
+2024-11-05 11:47:47,700 - INFO - PDF text extracted successfully.
+2024-11-05 11:47:54,458 - INFO - Data successfully structured by AI.
+2024-11-05 11:47:54,476 - INFO - Structured data saved to output_data.json.
+2024-11-05 11:47:54,700 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-05 11:55:17,040 - INFO - PDF text extracted successfully.
+2024-11-05 11:55:25,528 - INFO - Data successfully structured by AI.
+2024-11-05 11:55:25,553 - INFO - Structured data saved to output_data.json.
+2024-11-05 11:55:25,767 - ERROR - Error generating CV: [Errno 13] Permission denied: 'CV_Output_Formatted.docx'
+2024-11-05 11:55:47,924 - INFO - PDF text extracted successfully.
+2024-11-05 11:55:55,213 - INFO - Data successfully structured by AI.
+2024-11-05 11:55:55,232 - INFO - Structured data saved to output_data.json.
+2024-11-05 11:55:55,441 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 16:02:07,398 - INFO - PDF text extracted successfully.
+2024-11-11 16:02:19,831 - INFO - Data successfully structured by AI.
+2024-11-11 16:02:19,843 - INFO - Structured data saved to output_data.json.
+2024-11-11 16:02:20,252 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 16:04:25,934 - INFO - PDF text extracted successfully.
+2024-11-11 16:04:39,234 - INFO - Data successfully structured by AI.
+2024-11-11 16:04:39,242 - INFO - Structured data saved to output_data.json.
+2024-11-11 16:04:39,471 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:27:19,506 - INFO - PDF text extracted successfully.
+2024-11-11 17:27:28,852 - INFO - Data successfully structured by AI.
+2024-11-11 17:27:28,869 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:27:29,241 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:29:25,533 - INFO - PDF text extracted successfully.
+2024-11-11 17:29:35,326 - INFO - Data successfully structured by AI.
+2024-11-11 17:29:35,343 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:29:35,536 - ERROR - Error generating CV: [Errno 13] Permission denied: 'CV_Output_Formatted.docx'
+2024-11-11 17:29:49,158 - INFO - PDF text extracted successfully.
+2024-11-11 17:29:58,289 - INFO - Data successfully structured by AI.
+2024-11-11 17:29:58,307 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:29:58,622 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:31:27,336 - INFO - PDF text extracted successfully.
+2024-11-11 17:31:37,199 - INFO - Data successfully structured by AI.
+2024-11-11 17:31:37,213 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:31:37,431 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:34:24,212 - INFO - PDF text extracted successfully.
+2024-11-11 17:34:36,172 - INFO - Data successfully structured by AI.
+2024-11-11 17:34:36,198 - ERROR - JSON decoding error: Expecting ',' delimiter: line 79 column 21 (char 4095)
+2024-11-11 17:34:46,436 - INFO - Data successfully structured by AI.
+2024-11-11 17:34:46,459 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:34:46,711 - ERROR - Error generating CV: [Errno 13] Permission denied: 'CV_Output_Formatted.docx'
+2024-11-11 17:35:05,073 - INFO - PDF text extracted successfully.
+2024-11-11 17:35:15,433 - INFO - Data successfully structured by AI.
+2024-11-11 17:35:15,455 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:35:15,701 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:37:23,172 - INFO - PDF text extracted successfully.
+2024-11-11 17:37:36,191 - INFO - Data successfully structured by AI.
+2024-11-11 17:37:36,234 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:37:36,523 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:38:16,787 - INFO - PDF text extracted successfully.
+2024-11-11 17:38:29,681 - INFO - Data successfully structured by AI.
+2024-11-11 17:38:29,700 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:38:29,979 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:41:10,954 - INFO - PDF text extracted successfully.
+2024-11-11 17:41:24,466 - INFO - Data successfully structured by AI.
+2024-11-11 17:41:24,482 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:41:24,723 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:42:06,702 - INFO - PDF text extracted successfully.
+2024-11-11 17:42:22,253 - INFO - Data successfully structured by AI.
+2024-11-11 17:42:22,272 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:42:22,500 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:42:58,102 - INFO - PDF text extracted successfully.
+2024-11-11 17:43:12,677 - INFO - Data successfully structured by AI.
+2024-11-11 17:43:12,692 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:43:12,913 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:43:44,553 - INFO - PDF text extracted successfully.
+2024-11-11 17:43:58,362 - INFO - Data successfully structured by AI.
+2024-11-11 17:43:58,376 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:43:58,584 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:44:12,065 - INFO - PDF text extracted successfully.
+2024-11-11 17:44:20,466 - INFO - Data successfully structured by AI.
+2024-11-11 17:44:20,483 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:44:20,702 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:45:25,637 - INFO - PDF text extracted successfully.
+2024-11-11 17:45:44,237 - INFO - Data successfully structured by AI.
+2024-11-11 17:45:44,263 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:45:44,503 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:51:31,639 - INFO - PDF text extracted successfully.
+2024-11-11 17:51:48,720 - INFO - Data successfully structured by AI.
+2024-11-11 17:51:48,745 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:51:48,844 - ERROR - Error generating CV: Unexpected end of template. Jinja was looking for the following tags: 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
+2024-11-11 17:52:38,586 - INFO - PDF text extracted successfully.
+2024-11-11 17:52:54,135 - INFO - Data successfully structured by AI.
+2024-11-11 17:52:54,158 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:52:54,274 - ERROR - Error generating CV: Encountered unknown tag 'endif'.
+2024-11-11 17:53:44,849 - INFO - PDF text extracted successfully.
+2024-11-11 17:54:08,957 - INFO - Data successfully structured by AI.
+2024-11-11 17:54:08,988 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:54:09,257 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:57:05,683 - INFO - PDF text extracted successfully.
+2024-11-11 17:57:21,475 - INFO - Data successfully structured by AI.
+2024-11-11 17:57:21,496 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:57:21,725 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 17:58:34,245 - INFO - PDF text extracted successfully.
+2024-11-11 17:58:58,980 - INFO - Data successfully structured by AI.
+2024-11-11 17:58:59,006 - INFO - Structured data saved to output_data.json.
+2024-11-11 17:58:59,244 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 18:03:08,764 - INFO - PDF text extracted successfully.
+2024-11-11 18:03:28,826 - INFO - Data successfully structured by AI.
+2024-11-11 18:03:28,846 - INFO - Structured data saved to output_data.json.
+2024-11-11 18:03:29,100 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 18:04:16,822 - INFO - PDF text extracted successfully.
+2024-11-11 18:04:29,787 - INFO - Data successfully structured by AI.
+2024-11-11 18:04:29,803 - INFO - Structured data saved to output_data.json.
+2024-11-11 18:04:30,022 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 18:06:14,396 - INFO - PDF text extracted successfully.
+2024-11-11 18:06:31,078 - INFO - Data successfully structured by AI.
+2024-11-11 18:06:31,100 - INFO - Structured data saved to output_data.json.
+2024-11-11 18:06:31,302 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 18:07:18,378 - INFO - PDF text extracted successfully.
+2024-11-11 18:07:31,932 - INFO - Data successfully structured by AI.
+2024-11-11 18:07:31,948 - ERROR - JSON decoding error: Expecting property name enclosed in double quotes: line 25 column 17 (char 1070)
+2024-11-11 18:07:52,579 - INFO - Data successfully structured by AI.
+2024-11-11 18:07:52,610 - INFO - Structured data saved to output_data.json.
+2024-11-11 18:07:53,004 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 18:08:44,357 - INFO - PDF text extracted successfully.
+2024-11-11 18:08:59,306 - INFO - Data successfully structured by AI.
+2024-11-11 18:08:59,324 - INFO - Structured data saved to output_data.json.
+2024-11-11 18:08:59,561 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 18:10:20,228 - INFO - PDF text extracted successfully.
+2024-11-11 18:10:37,497 - INFO - Data successfully structured by AI.
+2024-11-11 18:10:37,520 - INFO - Structured data saved to output_data.json.
+2024-11-11 18:10:37,763 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 18:11:03,109 - INFO - PDF text extracted successfully.
+2024-11-11 18:11:14,827 - INFO - Data successfully structured by AI.
+2024-11-11 18:11:14,852 - INFO - Structured data saved to output_data.json.
+2024-11-11 18:11:15,079 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 18:11:33,359 - INFO - PDF text extracted successfully.
+2024-11-11 18:11:46,743 - INFO - Data successfully structured by AI.
+2024-11-11 18:11:46,761 - INFO - Structured data saved to output_data.json.
+2024-11-11 18:11:46,992 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 18:12:36,963 - INFO - PDF text extracted successfully.
+2024-11-11 18:12:55,679 - INFO - Data successfully structured by AI.
+2024-11-11 18:12:55,701 - INFO - Structured data saved to output_data.json.
+2024-11-11 18:12:55,901 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 18:18:28,393 - INFO - PDF text extracted successfully.
+2024-11-11 18:18:43,992 - INFO - Data successfully structured by AI.
+2024-11-11 18:18:44,019 - INFO - Structured data saved to output_data.json.
+2024-11-11 18:18:44,224 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 18:19:03,625 - INFO - PDF text extracted successfully.
+2024-11-11 18:19:22,456 - INFO - Data successfully structured by AI.
+2024-11-11 18:19:22,473 - INFO - Structured data saved to output_data.json.
+2024-11-11 18:19:22,687 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-11 18:19:43,666 - INFO - PDF text extracted successfully.
+2024-11-11 18:19:58,234 - INFO - Data successfully structured by AI.
+2024-11-11 18:19:58,252 - INFO - Structured data saved to output_data.json.
+2024-11-11 18:19:58,463 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 21:49:12,139 - INFO - PDF text extracted successfully.
+2024-11-12 21:49:27,611 - INFO - Data successfully structured by AI.
+2024-11-12 21:49:27,627 - INFO - Structured data saved to output_data.json.
+2024-11-12 21:49:27,951 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 21:51:54,156 - INFO - PDF text extracted successfully.
+2024-11-12 21:52:10,087 - INFO - Data successfully structured by AI.
+2024-11-12 21:52:10,103 - INFO - Structured data saved to output_data.json.
+2024-11-12 21:52:10,208 - ERROR - Error generating CV: Unexpected end of template. Jinja was looking for the following tags: 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
+2024-11-12 21:52:25,380 - INFO - PDF text extracted successfully.
+2024-11-12 21:52:40,956 - INFO - Data successfully structured by AI.
+2024-11-12 21:52:40,978 - INFO - Structured data saved to output_data.json.
+2024-11-12 21:52:41,075 - ERROR - Error generating CV: Unexpected end of template. Jinja was looking for the following tags: 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
+2024-11-12 21:57:26,933 - INFO - PDF text extracted successfully.
+2024-11-12 21:57:42,470 - INFO - Data successfully structured by AI.
+2024-11-12 21:57:42,493 - INFO - Structured data saved to output_data.json.
+2024-11-12 21:57:42,749 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 21:58:16,155 - INFO - PDF text extracted successfully.
+2024-11-12 21:58:35,363 - INFO - Data successfully structured by AI.
+2024-11-12 21:58:35,389 - INFO - Structured data saved to output_data.json.
+2024-11-12 21:58:35,680 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:00:43,335 - INFO - PDF text extracted successfully.
+2024-11-12 22:01:00,169 - INFO - Data successfully structured by AI.
+2024-11-12 22:01:00,192 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:01:00,496 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:03:11,758 - INFO - PDF text extracted successfully.
+2024-11-12 22:03:22,592 - INFO - Data successfully structured by AI.
+2024-11-12 22:03:22,617 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:03:22,966 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:04:16,636 - INFO - PDF text extracted successfully.
+2024-11-12 22:04:29,252 - INFO - Data successfully structured by AI.
+2024-11-12 22:04:29,274 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:04:29,373 - ERROR - Error generating CV: Unexpected end of template. Jinja was looking for the following tags: 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
+2024-11-12 22:04:59,111 - INFO - PDF text extracted successfully.
+2024-11-12 22:05:09,942 - INFO - Data successfully structured by AI.
+2024-11-12 22:05:09,964 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:05:10,060 - ERROR - Error generating CV: Unexpected end of template. Jinja was looking for the following tags: 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
+2024-11-12 22:05:47,074 - INFO - PDF text extracted successfully.
+2024-11-12 22:05:59,777 - INFO - Data successfully structured by AI.
+2024-11-12 22:05:59,794 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:05:59,998 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:06:33,177 - INFO - PDF text extracted successfully.
+2024-11-12 22:06:44,622 - INFO - Data successfully structured by AI.
+2024-11-12 22:06:44,645 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:06:44,936 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:07:21,919 - INFO - PDF text extracted successfully.
+2024-11-12 22:07:33,525 - INFO - Data successfully structured by AI.
+2024-11-12 22:07:33,541 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:07:33,756 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:08:05,159 - INFO - PDF text extracted successfully.
+2024-11-12 22:08:16,614 - INFO - Data successfully structured by AI.
+2024-11-12 22:08:16,637 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:08:16,725 - ERROR - Error generating CV: Unexpected end of template. Jinja was looking for the following tags: 'endfor' or 'else'. The innermost block that needs to be closed is 'for'.
+2024-11-12 22:10:37,921 - INFO - PDF text extracted successfully.
+2024-11-12 22:10:55,433 - INFO - Data successfully structured by AI.
+2024-11-12 22:10:55,494 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:10:55,715 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:13:29,706 - INFO - PDF text extracted successfully.
+2024-11-12 22:13:41,318 - INFO - Data successfully structured by AI.
+2024-11-12 22:13:41,336 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:13:41,537 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:14:44,928 - INFO - PDF text extracted successfully.
+2024-11-12 22:15:00,852 - INFO - Data successfully structured by AI.
+2024-11-12 22:15:00,870 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:15:01,071 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:15:27,895 - INFO - PDF text extracted successfully.
+2024-11-12 22:15:40,025 - INFO - Data successfully structured by AI.
+2024-11-12 22:15:40,042 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:15:40,242 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:17:08,386 - INFO - PDF text extracted successfully.
+2024-11-12 22:17:19,068 - INFO - Data successfully structured by AI.
+2024-11-12 22:17:19,080 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:17:19,302 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:18:27,155 - INFO - PDF text extracted successfully.
+2024-11-12 22:18:36,548 - INFO - Data successfully structured by AI.
+2024-11-12 22:18:36,560 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:18:36,787 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:19:01,553 - INFO - PDF text extracted successfully.
+2024-11-12 22:19:15,807 - INFO - Data successfully structured by AI.
+2024-11-12 22:19:15,818 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:19:15,896 - ERROR - Error generating CV: Encountered unknown tag 'endfor'.
+2024-11-12 22:19:34,740 - INFO - PDF text extracted successfully.
+2024-11-12 22:19:49,286 - INFO - Data successfully structured by AI.
+2024-11-12 22:19:49,301 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:19:49,413 - ERROR - Error generating CV: 'edu' is undefined
+2024-11-12 22:21:41,668 - INFO - PDF text extracted successfully.
+2024-11-12 22:21:55,919 - INFO - Data successfully structured by AI.
+2024-11-12 22:21:55,946 - ERROR - JSON decoding error: Expecting ',' delimiter: line 90 column 21 (char 4049)
+2024-11-12 22:22:03,636 - INFO - Data successfully structured by AI.
+2024-11-12 22:22:03,650 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:22:03,862 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:22:21,250 - INFO - PDF text extracted successfully.
+2024-11-12 22:22:33,204 - INFO - Data successfully structured by AI.
+2024-11-12 22:22:33,220 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:22:33,436 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:23:53,295 - INFO - PDF text extracted successfully.
+2024-11-12 22:24:13,270 - INFO - Data successfully structured by AI.
+2024-11-12 22:24:13,292 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:24:13,501 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:24:56,485 - INFO - PDF text extracted successfully.
+2024-11-12 22:25:12,668 - INFO - Data successfully structured by AI.
+2024-11-12 22:25:12,687 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:25:12,947 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 22:25:58,836 - INFO - PDF text extracted successfully.
+2024-11-12 22:26:16,886 - INFO - Data successfully structured by AI.
+2024-11-12 22:26:16,903 - INFO - Structured data saved to output_data.json.
+2024-11-12 22:26:17,147 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:13:52,416 - INFO - PDF text extracted successfully.
+2024-11-12 23:14:06,633 - INFO - Data successfully structured by AI.
+2024-11-12 23:14:06,651 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:14:06,862 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:14:42,593 - INFO - PDF text extracted successfully.
+2024-11-12 23:14:53,767 - INFO - Data successfully structured by AI.
+2024-11-12 23:14:53,786 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:14:53,995 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:15:49,810 - INFO - PDF text extracted successfully.
+2024-11-12 23:16:07,825 - INFO - Data successfully structured by AI.
+2024-11-12 23:16:07,844 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:16:08,053 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:16:44,211 - INFO - PDF text extracted successfully.
+2024-11-12 23:16:57,200 - INFO - Data successfully structured by AI.
+2024-11-12 23:16:57,217 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:16:57,296 - ERROR - Error generating CV: Encountered unknown tag 'endfor'.
+2024-11-12 23:17:41,890 - INFO - PDF text extracted successfully.
+2024-11-12 23:17:53,072 - INFO - Data successfully structured by AI.
+2024-11-12 23:17:53,092 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:17:53,325 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:20:43,182 - INFO - PDF text extracted successfully.
+2024-11-12 23:20:55,074 - INFO - Data successfully structured by AI.
+2024-11-12 23:20:55,091 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:20:55,355 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:22:16,233 - INFO - PDF text extracted successfully.
+2024-11-12 23:22:29,414 - INFO - Data successfully structured by AI.
+2024-11-12 23:22:29,435 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:22:29,674 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:23:43,081 - INFO - PDF text extracted successfully.
+2024-11-12 23:23:59,557 - INFO - Data successfully structured by AI.
+2024-11-12 23:23:59,578 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:23:59,790 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:25:30,280 - INFO - PDF text extracted successfully.
+2024-11-12 23:25:43,470 - INFO - Data successfully structured by AI.
+2024-11-12 23:25:43,488 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:25:43,717 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:26:34,452 - INFO - PDF text extracted successfully.
+2024-11-12 23:26:45,447 - INFO - Data successfully structured by AI.
+2024-11-12 23:26:45,462 - ERROR - JSON decoding error: Expecting property name enclosed in double quotes: line 25 column 16 (char 1248)
+2024-11-12 23:27:02,599 - INFO - Data successfully structured by AI.
+2024-11-12 23:27:02,616 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:27:02,821 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:31:24,122 - INFO - PDF text extracted successfully.
+2024-11-12 23:31:37,122 - INFO - Data successfully structured by AI.
+2024-11-12 23:31:37,138 - ERROR - An unexpected error occurred while structuring data with AI: name 'datetime' is not defined
+2024-11-12 23:31:37,138 - ERROR - Failed to structure data with AI. Exiting.
+2024-11-12 23:32:29,082 - INFO - PDF text extracted successfully.
+2024-11-12 23:32:42,183 - INFO - Data successfully structured by AI.
+2024-11-12 23:32:42,204 - ERROR - JSON decoding error: Expecting property name enclosed in double quotes: line 25 column 16 (char 1125)
+2024-11-12 23:32:56,448 - INFO - Data successfully structured by AI.
+2024-11-12 23:32:56,540 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:32:56,764 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:34:12,333 - INFO - PDF text extracted successfully.
+2024-11-12 23:34:23,358 - INFO - Data successfully structured by AI.
+2024-11-12 23:34:23,370 - ERROR - JSON decoding error: Expecting property name enclosed in double quotes: line 26 column 16 (char 1252)
+2024-11-12 23:34:38,154 - INFO - Data successfully structured by AI.
+2024-11-12 23:34:38,177 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:34:38,363 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:38:55,303 - INFO - PDF text extracted successfully.
+2024-11-12 23:39:06,361 - INFO - Data successfully structured by AI.
+2024-11-12 23:39:06,377 - WARNING - Date format not recognized for 'Janvier 2024', leaving as is.
+2024-11-12 23:39:06,377 - WARNING - Date format not recognized for 'Octobre 2024', leaving as is.
+2024-11-12 23:39:06,377 - INFO - Formatted 'Janvier 2024' to 'Janvier 2024', 'Octobre 2024' to 'Octobre 2024'
+2024-11-12 23:39:06,377 - WARNING - Date format not recognized for 'Juillet 2023', leaving as is.
+2024-11-12 23:39:06,377 - WARNING - Date format not recognized for 'Janvier 2024', leaving as is.
+2024-11-12 23:39:06,377 - INFO - Formatted 'Juillet 2023' to 'Juillet 2023', 'Janvier 2024' to 'Janvier 2024'
+2024-11-12 23:39:06,377 - WARNING - Date format not recognized for 'Septembre 2021', leaving as is.
+2024-11-12 23:39:06,377 - WARNING - Date format not recognized for 'Juin 2023', leaving as is.
+2024-11-12 23:39:06,377 - INFO - Formatted 'Septembre 2021' to 'Septembre 2021', 'Juin 2023' to 'Juin 2023'
+2024-11-12 23:39:06,377 - WARNING - Date format not recognized for 'Octobre 2018', leaving as is.
+2024-11-12 23:39:06,377 - WARNING - Date format not recognized for 'Septembre 2021', leaving as is.
+2024-11-12 23:39:06,378 - INFO - Formatted 'Octobre 2018' to 'Octobre 2018', 'Septembre 2021' to 'Septembre 2021'
+2024-11-12 23:39:06,379 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:39:06,532 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:40:48,322 - INFO - PDF text extracted successfully.
+2024-11-12 23:41:01,106 - INFO - Data successfully structured by AI.
+2024-11-12 23:41:01,124 - INFO - Formatted 'Janvier 2024' to '01.2024', 'Octobre 2024' to '10.2024'
+2024-11-12 23:41:01,125 - INFO - Formatted 'Juillet 2023' to '07.2023', 'Janvier 2024' to '01.2024'
+2024-11-12 23:41:01,125 - INFO - Formatted 'Septembre 2021' to '09.2021', 'Juin 2023' to '06.2023'
+2024-11-12 23:41:01,125 - INFO - Formatted 'Octobre 2018' to '10.2018', 'Septembre 2021' to '09.2021'
+2024-11-12 23:41:01,126 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:41:01,287 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:42:53,159 - INFO - PDF text extracted successfully.
+2024-11-12 23:43:07,095 - INFO - Data successfully structured by AI.
+2024-11-12 23:43:07,111 - WARNING - Date format not recognized for '2024-01', leaving as is.
+2024-11-12 23:43:07,111 - WARNING - Date format not recognized for '2024-10', leaving as is.
+2024-11-12 23:43:07,111 - INFO - Formatted '2024-01' to '2024-01', '2024-10' to '2024-10'
+2024-11-12 23:43:07,111 - WARNING - Date format not recognized for '2023-07', leaving as is.
+2024-11-12 23:43:07,111 - WARNING - Date format not recognized for '2024-01', leaving as is.
+2024-11-12 23:43:07,111 - INFO - Formatted '2023-07' to '2023-07', '2024-01' to '2024-01'
+2024-11-12 23:43:07,111 - WARNING - Date format not recognized for '2021-09', leaving as is.
+2024-11-12 23:43:07,112 - WARNING - Date format not recognized for '2023-06', leaving as is.
+2024-11-12 23:43:07,112 - INFO - Formatted '2021-09' to '2021-09', '2023-06' to '2023-06'
+2024-11-12 23:43:07,112 - WARNING - Date format not recognized for '2018-10', leaving as is.
+2024-11-12 23:43:07,112 - WARNING - Date format not recognized for '2021-09', leaving as is.
+2024-11-12 23:43:07,112 - INFO - Formatted '2018-10' to '2018-10', '2021-09' to '2021-09'
+2024-11-12 23:43:07,113 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:43:07,263 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:44:29,228 - INFO - PDF text extracted successfully.
+2024-11-12 23:44:42,795 - INFO - Data successfully structured by AI.
+2024-11-12 23:44:42,813 - INFO - Formatted 'Janvier 2024' to '01.2024', 'Octobre 2024' to '10.2024'
+2024-11-12 23:44:42,813 - INFO - Formatted 'Juillet 2023' to '07.2023', 'Janvier 2024' to '01.2024'
+2024-11-12 23:44:42,813 - INFO - Formatted 'Septembre 2021' to '09.2021', 'Juin 2023' to '06.2023'
+2024-11-12 23:44:42,813 - INFO - Formatted 'Octobre 2018' to '10.2018', 'Septembre 2021' to '09.2021'
+2024-11-12 23:44:42,815 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:44:42,950 - ERROR - Error generating CV: [Errno 13] Permission denied: 'CV_Output_Formatted.docx'
+2024-11-12 23:44:57,627 - INFO - PDF text extracted successfully.
+2024-11-12 23:45:14,258 - INFO - Data successfully structured by AI.
+2024-11-12 23:45:14,282 - INFO - Formatted 'Septembre 2021' to '09.2021', 'Juin 2023' to '06.2023'
+2024-11-12 23:45:14,282 - INFO - Formatted 'Octobre 2018' to '10.2018', 'Septembre 2021' to '09.2021'
+2024-11-12 23:45:14,282 - INFO - Formatted 'Janvier 2024' to '01.2024', 'Octobre 2024' to '10.2024'
+2024-11-12 23:45:14,283 - INFO - Formatted 'Juillet 2023' to '07.2023', 'Janvier 2024' to '01.2024'
+2024-11-12 23:45:14,284 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:45:14,440 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:45:53,012 - INFO - PDF text extracted successfully.
+2024-11-12 23:46:08,168 - INFO - Data successfully structured by AI.
+2024-11-12 23:46:08,190 - INFO - Formatted 'Janvier 2024' to '01.2024', 'Octobre 2024' to '10.2024'
+2024-11-12 23:46:08,190 - INFO - Formatted 'Juillet 2023' to '07.2023', 'Janvier 2024' to '01.2024'
+2024-11-12 23:46:08,190 - INFO - Formatted 'Septembre 2021' to '09.2021', 'Juin 2023' to '06.2023'
+2024-11-12 23:46:08,191 - INFO - Formatted 'Octobre 2018' to '10.2018', 'Septembre 2021' to '09.2021'
+2024-11-12 23:46:08,192 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:46:08,352 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:46:25,627 - INFO - PDF text extracted successfully.
+2024-11-12 23:46:39,000 - INFO - Data successfully structured by AI.
+2024-11-12 23:46:39,024 - INFO - Formatted 'Septembre 2021' to '09.2021', 'Juin 2023' to '06.2023'
+2024-11-12 23:46:39,024 - INFO - Formatted 'Octobre 2018' to '10.2018', 'Septembre 2021' to '09.2021'
+2024-11-12 23:46:39,024 - INFO - Formatted 'Janvier 2024' to '01.2024', 'Octobre 2024' to '10.2024'
+2024-11-12 23:46:39,024 - INFO - Formatted 'Juillet 2023' to '07.2023', 'Janvier 2024' to '01.2024'
+2024-11-12 23:46:39,026 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:46:39,191 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:56:03,009 - INFO - PDF text extracted successfully.
+2024-11-12 23:56:15,543 - INFO - Data successfully structured by AI.
+2024-11-12 23:56:15,561 - INFO - Formatted 'Janvier 2024' to '01.2024', 'Octobre 2024' to '10.2024'
+2024-11-12 23:56:15,561 - INFO - Formatted 'Juillet 2023' to '07.2023', 'Janvier 2024' to '01.2024'
+2024-11-12 23:56:15,561 - INFO - Formatted 'Septembre 2021' to '09.2021', 'Juin 2023' to '06.2023'
+2024-11-12 23:56:15,561 - INFO - Formatted 'Octobre 2018' to '10.2018', 'Septembre 2021' to '09.2021'
+2024-11-12 23:56:15,563 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:56:15,767 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:58:47,070 - INFO - PDF text extracted successfully.
+2024-11-12 23:59:01,348 - INFO - Data successfully structured by AI.
+2024-11-12 23:59:01,374 - INFO - Formatted 'Janvier 2024' to '01.2024', 'Octobre 2024' to '10.2024'
+2024-11-12 23:59:01,374 - INFO - Formatted 'Juillet 2023' to '07.2023', 'Janvier 2024' to '01.2024'
+2024-11-12 23:59:01,374 - INFO - Formatted 'Septembre 2021' to '09.2021', 'Juin 2023' to '06.2023'
+2024-11-12 23:59:01,375 - INFO - Formatted 'Octobre 2018' to '10.2018', 'Septembre 2021' to '09.2021'
+2024-11-12 23:59:01,377 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:59:01,572 - INFO - CV generated successfully at CV_Output_Formatted.docx
+2024-11-12 23:59:06,792 - INFO - PDF text extracted successfully.
+2024-11-12 23:59:18,136 - INFO - Data successfully structured by AI.
+2024-11-12 23:59:18,153 - INFO - Formatted 'Janvier 2024' to '01.2024', 'Octobre 2024' to '10.2024'
+2024-11-12 23:59:18,154 - INFO - Formatted 'Juillet 2023' to '07.2023', 'Janvier 2024' to '01.2024'
+2024-11-12 23:59:18,154 - INFO - Formatted 'Septembre 2021' to '09.2021', 'Juin 2023' to '06.2023'
+2024-11-12 23:59:18,154 - INFO - Formatted 'Octobre 2018' to '10.2018', 'Septembre 2021' to '09.2021'
+2024-11-12 23:59:18,156 - INFO - Structured data saved to output_data.json.
+2024-11-12 23:59:18,327 - INFO - CV generated successfully at CV_Output_Formatted.docx

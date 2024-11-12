@@ -1,0 +1,154 @@
+{
+    "name": "Imrane TOUAMA",
+    "profile": "Analyste technique d'affaires avec 6 ans d'expérience en analyse fonctionnelle et technique dans les environnements .NET, spécialisé dans la collecte des besoins, la gestion de projets et la conception de solutions informatiques efficaces pour des projets internationaux. Expertise en Microsoft technologies telles que .NET, C#, Azure Cloud et Azure DevOps.",
+    "title": "Analyste d'affaires technique spécialisé en programmation",
+    "education": [
+        {
+            "end_date": "Septembre 2021",
+            "degree": "Master",
+            "field": "Informatique",
+            "institution": "Institut d'Ingénierie et d'Analyse Informatique Poly Informatique de Lyon"
+        },
+        {
+            "end_date": "Septembre 2019",
+            "degree": "Licence",
+            "field": "Sciences Informatiques et de Gestion",
+            "institution": "Université des Sciences Informatiques et de Gestion Lyon 1"
+        },
+        {
+            "end_date": "Septembre 2018",
+            "degree": "Technicien",
+            "field": "Programmation Informatique",
+            "institution": "Université Lyon 1"
+        }
+    ],
+    "age": "",
+    "experience": [
+        {
+            "start_date": "01.2024",
+            "end_date": "10.2024",
+            "company": "Valtech",
+            "location": "Genève",
+            "position": "Développeur de logiciels et analyste d'affaires",
+            "clients": "",
+            "projects": [
+                {
+                    "name": "Implémentation d'un outil d'échange de données ETL en .NET 4",
+                    "description": "Outil de développeur et analyste d'affaires pour rationaliser l'intégration des données.",
+                    "missions": [
+                        "Conception et gestion de bases de données relationnelles",
+                        "Développement de tableaux de bord interactifs"
+                    ]
+                }
+            ],
+            "technologies": [
+                ".NET 4",
+                "SQL Server",
+                "Python",
+                "Power BI"
+            ]
+        },
+        {
+            "start_date": "07.2023",
+            "end_date": "01.2024",
+            "company": "ISO (Organisation internationale de normalisation)",
+            "location": "Vernier, Genève",
+            "position": "Consultant en support et analyste d'affaires",
+            "clients": "",
+            "projects": [
+                {
+                    "name": "Mise en place de l'outil de support principal Help Scout",
+                    "description": "Amélioration des réponses aux clients et développement de base de connaissances.",
+                    "missions": [
+                        "Développement de système de ticket avec Jira",
+                        "Création d'équipe de support technique"
+                    ]
+                }
+            ],
+            "technologies": [
+                "Help Scout",
+                "Jira"
+            ]
+        },
+        {
+            "start_date": "09.2021",
+            "end_date": "06.2023",
+            "company": "Le Groupe Adecco",
+            "location": "Zurich et Lyon",
+            "position": "Ingénieur logiciel et analyste d'affaires",
+            "clients": "",
+            "projects": [
+                {
+                    "name": "Développement de fonctionnalités API sur une plateforme Cloud",
+                    "description": "Utilisation de technologies Microsoft comme Azure, .NET4 C# et Azure DevOps.",
+                    "missions": [
+                        "Gestion complète de projet",
+                        "Rédaction de documents opérationnels"
+                    ]
+                }
+            ],
+            "technologies": [
+                ".NET4 C#",
+                "Azure",
+                "Power BI",
+                "Jira Atlassian"
+            ]
+        },
+        {
+            "start_date": "10.2018",
+            "end_date": "09.2021",
+            "company": "Groupe Eiffage",
+            "location": "Lyon",
+            "position": "Développeur Web",
+            "clients": "",
+            "projects": [
+                {
+                    "name": "Développement d'un outil pour les techniciens",
+                    "description": "Outil pour audits et contrôles de sécurité.",
+                    "missions": [
+                        "Développement d'outils QHSE",
+                        "Participation en tant que Business Analyst"
+                    ]
+                }
+            ],
+            "technologies": [
+                "PHP",
+                "JavaScript",
+                "Azure"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "name": "Anglais",
+            "proficiency": "Certification C1"
+        },
+        {
+            "name": "Français",
+            "proficiency": ""
+        }
+    ],
+    "skills": {
+        "technical_skills": [
+            ".NET",
+            "C#",
+            "Azure Cloud",
+            "Azure DevOps",
+            "Python",
+            "SQL Server",
+            "Power BI",
+            "Jira",
+            "PHP",
+            "JavaScript"
+        ],
+        "project_skills": [
+            "Collaboration et travail d'équipe",
+            "Organisation et gestion du temps",
+            "Communication",
+            "Résolution de problèmes",
+            "Pensée critique",
+            "Flexibilité et adaptabilité",
+            "Écoute active"
+        ]
+    }
+}
