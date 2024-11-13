@@ -12,13 +12,7 @@ import logging
 import tempfile
 from io import StringIO
 
-# Display logs in the app
-st.write("### Error Logs")
-logs = get_logs()
-if logs.strip():
-    st.text_area("Logs", logs, height=300)
-else:
-    st.write("No logs to display.")
+
 
 # Temporary log file setup
 temp_log_file = tempfile.NamedTemporaryFile(delete=False, suffix=".txt")
@@ -50,7 +44,14 @@ def get_temp_log_path():
 # Set your OpenAI API key
 openai.api_key = "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"
 
-
+# Display logs in the app
+st.write("### Error Logs")
+logs = get_logs()
+if logs.strip():
+    st.text_area("Logs", logs, height=300)
+else:
+    st.write("No logs to display.")
+    
 def extract_text_from_pdf(pdf_path):
     """Extract text from a PDF file."""
     try:
