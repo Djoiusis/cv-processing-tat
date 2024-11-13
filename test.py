@@ -219,15 +219,9 @@ def main(pdf_path):
         st.error("Candidate data is invalid or missing. Please check the logs.")
         st.stop()
 
-    # Log the structure of candidate_data
-    logging.info(f"Candidate data: {json.dumps(candidate_data, indent=2, ensure_ascii=False)}")
-    # Generate the CV
     processed_file_path = generate_cv(template_path, candidate_data, output_path)
     if not processed_file_path:
         return None  
-
-    # Log success
-    logging.info(f"CV successfully generated at: {processed_file_path}")
     return processed_file_path  
 
 if __name__ == "__main__":
