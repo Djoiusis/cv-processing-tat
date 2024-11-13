@@ -36,36 +36,6 @@ if uploaded_file is not None:
             st.text_area("Logs", "Aucun log disponible.", height=300, key="logs_realtime_empty")  # Unique key
 
         st.success("Traitement terminé avec succès.")
-        if candidate_data is None:
-            st.error("Failed to process the CV. Check logs below.")
-            st.write("No candidate data found.")
-            st.stop()
-            # Display structured data
-            st.write("Structured Data from AI:")
-            st.json(candidate_data)
-
-        # Generate the CV
-        processed_file_path = generate_cv(template_path, candidate_data, output_path)
-        if processed_file_path and os.path.exists(processed_file_path):
-            st.write(f"Temporary file exists: {processed_file_path}")
-        else:
-            st.write(f"Temporary file missing: {processed_file_path}")
-        st.write(f"File generated : {processed_file_path}")
-        if processed_file_path:
-            if os.path.exists(processed_file_path):
-                st.success("CV processed successfully!")
-                # Add the download button for the processed CV
-                with open(processed_file_path, "rb") as processed_file:
-                    st.download_button(
-                    label="Download Processed CV",
-                    data=processed_file,
-                    file_name=os.path.basename(processed_file_path),  # Correct file name
-                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                )    
-            else:
-                st.error(f"File generated but not found: {processed_file_path}")
-        else:
-            st.error("Failed to generate the CV. Please check the logs.")
 
     
                 
