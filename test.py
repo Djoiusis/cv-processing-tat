@@ -145,23 +145,20 @@ def structure_data_with_ai(text):
             break
     return None
 
+
+
 def generate_cv(template_path, data, output_path):
     """Populates the CV template with structured data."""
-    # Check if the template file exists
-    if not os.path.exists(template_path):
-        logging.error(f"Template file not found at {template_path}")
-        return
-
+    # Generate a unique output file path
+    output_path = f"{output_path}.docx"
+    
     try:
-        # Generate a unique file name for the output
-        unique_output_path = f"{output_path}_{uuid.uuid4().hex[:8]}.docx"
-
         # Load the template and render with structured data
         doc = DocxTemplate(template_path)
         doc.render(data)
-        doc.save(unique_output_path)
-        logging.info(f"CV generated successfully at {unique_output_path}")
-        return unique_output_path
+        doc.save(output_path)
+        logging.info(f"CV generated successfully at {output_path}")
+        return output_path  # Return the generated file path
     except Exception as e:
         logging.error(f"Error generating CV: {e}")
         return None
