@@ -16,7 +16,9 @@ from io import StringIO
 
 # Créez un buffer pour les logs
 log_buffer = StringIO()
-
+for handler in logging.root.handlers[:]:
+    logging.root.removeHandler(handler)
+    
 # Configurez les logs pour écrire dans le buffer
 logging.basicConfig(
     level=logging.INFO,
