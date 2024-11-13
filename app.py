@@ -1,5 +1,5 @@
 import streamlit as st
-from cv_processing import main as process_cv  # Import the updated main function
+from test import main as process_cv  # Import the updated main function
 
 # Page layout: Title and logo
 col1, col2 = st.columns([3, 1])
