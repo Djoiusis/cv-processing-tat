@@ -224,6 +224,21 @@ def main(pdf_path):
         logging.error("Failed to generate the CV.")
         return None
     logging.info(f"CV successfully generated at: {processed_file_path}")
+    
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".txt") as temp_file:
+        temp_file.write(b"This is the content of the processed file.\n")
+        temp_file_path = temp_file.name  # Save the path for downloading
+
+    st.success(f"File created at: {temp_file_path}")
+
+    # Automatically download the file once processing is complete
+    with open(temp_file_path, "rb") as file:
+        st.download_button(
+            label="Download Processed File",
+            data=file,
+            file_name="processed_file.txt",
+            mime="text/plain"
+        )
     return processed_file_path
 
 
