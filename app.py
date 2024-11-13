@@ -42,17 +42,21 @@ if uploaded_file is not None:
 
         # Generate the CV
         processed_file_path = generate_cv(template_path, candidate_data, output_path)
-        if processed_file_path and os.path.exists(processed_file_path):  # Check if file exists before download
-            st.success("CV processed successfully!")
-            with open(processed_file_path, "rb") as processed_file:
-                st.download_button(
-                label="Download Processed CV",
-                data=processed_file,
-                file_name=os.path.basename(processed_file_path),  # Ensure correct file name
-                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-            )
+        if processed_file_path:
+            if os.path.exists(processed_file_path):
+                st.success("CV processed successfully!")
+                # Add the download button for the processed CV
+                with open(processed_file_path, "rb") as processed_file:
+                    st.download_button(
+                    label="Download Processed CV",
+                    data=processed_file,
+                    file_name=os.path.basename(processed_file_path),  # Correct file name
+                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                )    
+            else:
+                st.error(f"File generated but not found: {processed_file_path}")
         else:
-            st.error("Failed to generate the CV. Check logs below.")
+            st.error("Failed to generate the CV. Please check the logs.")
     except Exception as e:
         st.error(f"An error occurred during processing: {e}")
 
