@@ -173,13 +173,16 @@ def generate_cv(template_path, data, output_path):
             logging.error(f"Template file not found at {template_path}")
             return None
 
+        if data is None or not isinstance(data, dict):
+            logging.error("Invalid or missing data for CV generation.")
+            return None
+
         # Ensure the output path ends with .docx
         if not output_path.endswith(".docx"):
             output_path += ".docx"
 
-        # Render and save the document
         doc = DocxTemplate(template_path)
-        doc.render(data)
+        doc.render(data)  # Render the template with the data
         doc.save(output_path)
         logging.info(f"CV generated successfully at {output_path}")
         return output_path
