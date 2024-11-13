@@ -178,9 +178,10 @@ def generate_cv(template_path, data, output_path):
             logging.error("Invalid or missing data for CV generation.")
             return None
 
-        # Create a temporary file for the processed CV
+        # Generate a unique temporary file each time
         with tempfile.NamedTemporaryFile(delete=False, suffix=".docx") as temp_file:
             temp_file_path = temp_file.name
+            logging.info(f"Temporary file created at: {temp_file_path}")
 
         # Generate the CV and save it to the temporary file
         doc = DocxTemplate(template_path)
