@@ -26,6 +26,7 @@ if uploaded_file is not None:
         candidate_data = process_cv(pdf_path)
         # Display logs from `test.py`
         logs = get_logs()
+        print("Current logs:", logs)
         if logs.strip():
             st.text_area("Logs", logs, height=300)
         else:
