@@ -26,11 +26,12 @@ if uploaded_file is not None:
 
         # Mettre à jour les logs en temps réel
         while True:
-            logs = get_logs()  # Obtenir les logs depuis le buffer
-            if logs.strip():  # Vérifiez si des logs existent
-                log_container.text_area("Logs", logs, height=300)
+            logs = get_logs()  # Récupérer les logs actuels
+            if logs.strip():  # Vérifiez que les logs ne sont pas vides
+                log_container.text_area("Logs", logs, height=300)  # Mettez à jour l'affichage des logs
             else:
                 log_container.text_area("Logs", "Aucun log pour le moment.", height=300)
+
                 
             if "Données structurées avec succès." in logs or "Erreur inattendue" in logs:
                 break  # Arrêter la boucle une fois terminé
