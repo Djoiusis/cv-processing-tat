@@ -166,7 +166,7 @@ def generate_cv(template_path, data, output_path):
 
 def main(pdf_path):
     # File paths
-    template_path = 'C:/Users/karim/Downloads/CV/CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.docx'  # Path to the Word template
+    template_path = 'CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.docx'
     output_path = 'CV_Output_Formatted.docx'
     
     # Step 1: Extract text from PDF
