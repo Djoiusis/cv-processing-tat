@@ -14,22 +14,21 @@ from io import StringIO
 
 
 
-# Création d'un buffer pour stocker les logs
+# Créez un buffer pour les logs
 log_buffer = StringIO()
 
-# Configuration des logs
+# Configurez les logs pour écrire dans le buffer
 logging.basicConfig(
-    level=logging.INFO,  # Niveau des logs (INFO, DEBUG, ERROR)
+    level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.StreamHandler(log_buffer),  # Écriture des logs dans le buffer
+        logging.StreamHandler(log_buffer),  # Écrire dans le buffer
     ],
 )
 
-# Fonction pour récupérer les logs
 def get_logs():
-    """Retourne les logs du buffer."""
-    log_buffer.seek(0)  # Déplace le curseur au début du buffer
+    """Récupère les logs à partir du buffer."""
+    log_buffer.seek(0)  # Repositionnez le curseur au début du buffer
     return log_buffer.read()
 
 # Set your OpenAI API key
@@ -183,6 +182,7 @@ def generate_cv(template_path, data, output_path):
 
 def main(pdf_path):
     # File paths
+    logging.info(f"Début du traitement du fichier : {pdf_path}")
     template_path = 'CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.docx'
     output_path = 'CV_Output_Formatted.docx'
     
