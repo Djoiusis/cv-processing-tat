@@ -1,5 +1,5 @@
 import streamlit as st
-from test import main as process_cv, generate_cv, get_logs, get_temp_log_path
+from test import main as process_cv, generate_cv, get_logs
 import os
 
 # Page layout
