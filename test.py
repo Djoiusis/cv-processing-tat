@@ -149,10 +149,10 @@ def structure_data_with_ai(text):
 
 def generate_cv(template_path, data, output_path):
     """Populates the CV template with structured data."""
-    # Generate a unique output file path
-    output_path = f"{output_path}.docx"
-    
     try:
+        # Generate a unique output file path
+        output_path = f"{output_path}.docx"
+
         # Load the template and render with structured data
         doc = DocxTemplate(template_path)
         doc.render(data)
@@ -161,7 +161,8 @@ def generate_cv(template_path, data, output_path):
         return output_path  # Return the generated file path
     except Exception as e:
         logging.error(f"Error generating CV: {e}")
-        return None
+        raise  # Re-raise the exception so it's handled upstream
+
 
 def main(pdf_path):
     # File paths
