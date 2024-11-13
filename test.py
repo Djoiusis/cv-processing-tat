@@ -172,6 +172,7 @@ def generate_cv(template_path, data, output_path):
         if not os.path.exists(template_path):
             logging.error(f"Template file not found at {template_path}")
             return None
+        logging.info(f"generate_cv called with template_path={template_path}, output_path={output_path}")
 
         if data is None or not isinstance(data, dict):
             logging.error("Invalid or missing data for CV generation.")
