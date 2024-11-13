@@ -23,7 +23,7 @@ if uploaded_file is not None:
     try:
         # Appeler process_cv pour traiter le fichier PDF
         candidate_data = None
-
+        log_container = st.empty()
         # Mettre à jour les logs en temps réel
         logs = ""  # Initialiser les logs comme une chaîne vide
         while True:
