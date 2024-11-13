@@ -47,13 +47,21 @@ else:
     st.write("No logs to display.")
 
 
-def cleanup_output_files(pattern="*.docx"):
-    """Delete all output files matching the specified pattern."""
+def cleanup_output_files(pattern="*.docx", exclude_files=None):
+    """
+    Delete all output files matching the specified pattern,
+    excluding the files listed in exclude_files.
+    """
     try:
-        # Find all files matching the pattern in the current working directory
+        exclude_files = exclude_files or []  # Default to an empty list if None
+
+        # Find all files matching the pattern
         files_to_delete = glob.glob(pattern)
 
-        # Iterate and remove each file
+        # Filter out excluded files
+        files_to_delete = [file for file in files_to_delete if file not in exclude_files]
+
+        # Delete each file
         for file_path in files_to_delete:
             os.remove(file_path)
             logging.info(f"Deleted file: {file_path}")
@@ -61,6 +69,7 @@ def cleanup_output_files(pattern="*.docx"):
         logging.info("Cleanup completed successfully.")
     except Exception as e:
         logging.error(f"Error during cleanup: {e}")
+
     
 def extract_text_from_pdf(pdf_path):
     """Extract text from a PDF file."""
@@ -187,7 +196,7 @@ def generate_cv(template_path, data, output_path):
         logging.info(f"Files in directory: {os.listdir(os.getcwd())}")
         logging.info(f"Looking for template at: {template_path}")
          # Cleanup previous output files
-        cleanup_output_files("*.docx")
+         cleanup_output_files("*.docx", exclude_files=[template_path])
 
         if not os.path.exists(template_path):
             logging.error(f"Template file not found at {template_path}")
