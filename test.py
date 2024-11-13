@@ -9,21 +9,22 @@ from docxtpl import DocxTemplate
 import logging
 from io import StringIO
 
-# Create a string buffer for logs
+# Create a log buffer for capturing logs
 log_buffer = StringIO()
 
-# Configure logging to write to the string buffer
+# Configure logging to write to both the buffer and the console
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
+    format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.StreamHandler(log_buffer)  # Stream logs to the buffer
+        logging.StreamHandler(log_buffer),  # Log to the buffer for Streamlit display
+        logging.StreamHandler()  # Log to the console for debugging during development
     ]
 )
 
-# Use this function to retrieve logs for display
 def get_logs():
-    log_buffer.seek(0)  # Move to the beginning of the buffer
+    """Retrieve logs from the buffer for display in Streamlit."""
+    log_buffer.seek(0)  # Go to the beginning of the buffer
     return log_buffer.read()
 
 # Set your OpenAI API key
