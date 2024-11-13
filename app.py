@@ -72,13 +72,3 @@ if uploaded_file is not None:
                 
     except Exception as e:
         st.error(f"Erreur pendant le traitement : {e}")
-
-
-
-# Display logs
-st.write("### Error Logs")
-logs = get_logs()
-if logs.strip():
-    st.text_area("Logs", logs, height=300)
-else:
-    st.write("No logs to display.")
