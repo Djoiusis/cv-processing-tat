@@ -220,7 +220,15 @@ def main(pdf_path):
 
     # Log the structure of candidate_data
     logging.info(f"Candidate data: {json.dumps(candidate_data, indent=2, ensure_ascii=False)}")
-    generate_cv(template_path, candidate_data, output_path)
+    # Generate the CV
+    processed_file_path = generate_cv(template_path, candidate_data, output_path)
+    if not processed_file_path:
+        logging.error("Failed to generate the CV. Aborting.")
+        return None  # Explicitly return None
+
+    # Log success
+    logging.info(f"CV successfully generated at: {processed_file_path}")
+    return processed_file_path  # Return the generated file path
 
 if __name__ == "__main__":
     main()
