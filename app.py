@@ -25,8 +25,7 @@ if uploaded_file is not None:
         while True:
             logs = get_logs()
             log_box.text_area("Logs", logs, height=300)
-            if "Données structurées avec succès." in logs or "Erreur inattendue" in logs:
-                break  # Stop si le traitement est terminé ou en cas d'erreur
+                
         except Exception as e:
             st.error(f"Erreur pendant le traitement : {e}")
         if candidate_data is None:
