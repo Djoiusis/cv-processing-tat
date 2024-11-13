@@ -33,7 +33,7 @@ def get_logs():
     return log_buffer.read() or "No logs found in buffer."
 
 # Set your OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 # Display logs in the app
 st.write("### Error Logs")
