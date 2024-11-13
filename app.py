@@ -17,10 +17,18 @@ if uploaded_file is not None:
         f.write(uploaded_file.getbuffer())
 
     st.write("File uploaded successfully!")
-
+    st.write("### Logs en Temps Réel")
+    log_box = st.empty()  # Place un conteneur pour les logs
     try:
         # Process the CV
         candidate_data = process_cv(pdf_path)
+        while True:
+            logs = get_logs()
+            log_box.text_area("Logs", logs, height=300)
+            if "Données structurées avec succès." in logs or "Erreur inattendue" in logs:
+                break  # Stop si le traitement est terminé ou en cas d'erreur
+        except Exception as e:
+            st.error(f"Erreur pendant le traitement : {e}")
         if candidate_data is None:
             st.error("Failed to process the CV. Check logs below.")
             st.write("No candidate data found.")
