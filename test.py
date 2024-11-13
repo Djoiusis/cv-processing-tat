@@ -223,7 +223,7 @@ def main(pdf_path):
     if not processed_file_path:
         logging.error("Failed to generate the CV.")
         return None
-
+    logging.info(f"CV successfully generated at: {processed_file_path}")
     return processed_file_path
 
 
