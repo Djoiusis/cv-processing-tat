@@ -53,7 +53,7 @@ if uploaded_file is not None:
                 st.download_button(
                     label="Download Processed CV",
                     data=processed_file,
-                    file_name="Processed_CV.docx",
+                    file_name=os.path.basename(processed_file_path),  # Use the file name directly
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 )
         else:
