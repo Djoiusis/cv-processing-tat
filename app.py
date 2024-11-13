@@ -57,8 +57,7 @@ if candidate_data is None:
             st.error(f"File generated but not found: {processed_file_path}")
     else:
         st.error("Failed to generate the CV. Please check the logs.")
-except Exception as e:
-    st.error(f"An error occurred during processing: {e}")
+
 
 # Display logs
 st.write("### Error Logs")
