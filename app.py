@@ -39,6 +39,10 @@ if uploaded_file is not None:
 
         # Generate the CV
         processed_file_path = generate_cv(template_path, candidate_data, output_path)
+        if processed_file_path and os.path.exists(processed_file_path):
+            st.write(f"Temporary file exists: {processed_file_path}")
+        else:
+            st.write(f"Temporary file missing: {processed_file_path}")
         st.write(f"File generated : {processed_file_path}")
         if processed_file_path:
             if os.path.exists(processed_file_path):
