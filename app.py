@@ -6,6 +6,8 @@ import os
 st.title("CV Processing App")
 st.write("Upload a PDF file to process the CV")
 
+
+
 # File uploader
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
 template_path = "CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.docx"
@@ -25,28 +27,13 @@ if uploaded_file is not None:
     try:
   
         candidate_data = process_cv(pdf_path)
-        # Counter for unique keys
-        iteration = 0
-
-        # Boucle pour mettre à jour les logs
-        while True:
-            logs = get_logs()
-
-            # Mettre à jour les logs avec une clé unique
-            log_container.text_area(
-                "Logs",
-                logs if logs.strip() else "Aucun log pour le moment.",
-                height=300,
-                key=f"log_area_{iteration}"  # Générer une clé unique
-            )
-
-            iteration += 1  # Incrémenter le compteur pour la clé
-
-            # Sortir de la boucle si le traitement est terminé
-            if "Données structurées avec succès." in logs or "Erreur inattendue" in logs:
-                break
-
-            st.success("Traitement terminé avec succès.")
+        # Display logs from `test.py`
+        logs = get_logs()
+        if logs.strip():
+            st.text_area("Logs", logs, height=300)
+        else:
+            st.text_area("Logs", "Aucun log disponible.", height=300)
+        st.success("Traitement terminé avec succès.")
                 
     except Exception as e:
         st.error(f"Erreur pendant le traitement : {e}")
