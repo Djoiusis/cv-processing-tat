@@ -163,7 +163,7 @@ def structure_data_with_ai(text):
 
 
 def generate_cv(template_path, data, output_path):
-    """Populates the CV template with structured data."""
+    """Generates the CV using the specified template and structured data."""
     try:
         logging.info(f"Current working directory: {os.getcwd()}")
         logging.info(f"Files in directory: {os.listdir(os.getcwd())}")
@@ -177,6 +177,7 @@ def generate_cv(template_path, data, output_path):
         if not output_path.endswith(".docx"):
             output_path += ".docx"
 
+        # Render and save the document
         doc = DocxTemplate(template_path)
         doc.render(data)
         doc.save(output_path)
@@ -185,6 +186,7 @@ def generate_cv(template_path, data, output_path):
     except Exception as e:
         logging.error(f"Error generating CV: {e}")
         return None
+
 
 
 def main(pdf_path):
