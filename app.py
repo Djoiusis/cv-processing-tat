@@ -14,8 +14,8 @@ with col2:
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
 template_path = "CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.docx"
 output_path = "/tmp/CV_Output_Formatted.docx"
-st.write("### Logs")
-log_box = st.empty()  # Place un conteneur pour les logs
+# st.write("### Logs")
+# log_box = st.empty()  # Place un conteneur pour les logs
 
 if uploaded_file is not None:
     # Save the uploaded file to a temporary location
@@ -28,7 +28,6 @@ if uploaded_file is not None:
   
         candidate_data = process_cv(temp_file_path)
         """
-        # Display logs from `test.py`
         logs = get_logs()
         print("Current logs:", logs)
         if logs.strip():
