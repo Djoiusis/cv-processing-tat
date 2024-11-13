@@ -39,7 +39,6 @@ if uploaded_file is not None:
 
         # Generate the CV
         processed_file_path = generate_cv(template_path, candidate_data, output_path)
-        logging.info(f"Processed file path: {processed_file_path}")
         if processed_file_path:
             if os.path.exists(processed_file_path):
                 st.success("CV processed successfully!")
