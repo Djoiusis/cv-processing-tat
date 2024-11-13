@@ -195,7 +195,6 @@ def generate_cv(template_path, data, output_path):
 
 
 def main(pdf_path):
-    import logging
     # File paths
     logging.info(f"Début du traitement du fichier : {pdf_path}")
     template_path = 'CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.docx'
@@ -220,9 +219,7 @@ def main(pdf_path):
         st.stop()
 
     processed_file_path = generate_cv(template_path, candidate_data, output_path)
-    if not processed_file_path:
-        return None  
-    return processed_file_path  
+
 
 if __name__ == "__main__":
     main()
