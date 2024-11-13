@@ -11,6 +11,13 @@ import logging
 import tempfile
 from io import StringIO
 
+# Display logs in the app
+st.write("### Error Logs")
+logs = get_logs()
+if logs.strip():
+    st.text_area("Logs", logs, height=300)
+else:
+    st.write("No logs to display.")
 
 # Temporary log file setup
 temp_log_file = tempfile.NamedTemporaryFile(delete=False, suffix=".txt")
