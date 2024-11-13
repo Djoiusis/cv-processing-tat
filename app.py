@@ -25,11 +25,12 @@ if uploaded_file is not None:
         candidate_data = None
 
         # Mettre à jour les logs en temps réel
+        logs = ""  # Initialiser les logs comme une chaîne vide
         while True:
-            logs = get_logs()
-            log_box.text_area("Logs", logs, height=300)  # Utilise un seul key fixe
+            logs = get_logs()  # Obtenir les logs actuels
+            log_container.text_area("Logs", logs, height=300)  # Mettre à jour le contenu sans recréer l'élément
             if "Données structurées avec succès." in logs or "Erreur inattendue" in logs:
-                break  # Stop la boucle si le traitement est terminé
+                  break  # Arrêter la boucle une fois le traitement terminé ou en cas d'erreur
         # Process the CV
         candidate_data = process_cv(pdf_path)
                 
