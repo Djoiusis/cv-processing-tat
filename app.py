@@ -6,14 +6,13 @@ import os
 st.title("CV Processing App")
 st.write("Upload a PDF file to process the CV")
 
-
-
 # File uploader
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
 template_path = "CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.docx"
-output_path = "Processed_CV"
+output_path = "CV_Output_Formatted.docx"
+
+# Logs section
 st.write("### Logs en Temps Réel")
-log_box = st.empty()  # Place un conteneur pour les logs
 
 if uploaded_file is not None:
     pdf_path = "uploaded_cv.pdf"
@@ -22,48 +21,34 @@ if uploaded_file is not None:
 
     st.write("File uploaded successfully!")
     try:
-  
+        # Process the CV
         candidate_data = process_cv(pdf_path)
-        # Display logs from `test.py`
-        logs = get_logs()
-        print("Current logs:", logs)
-        if logs.strip():
-            st.text_area("Logs", logs, height=300, key="logs_realtime")  # Unique key
-        else:
-            st.text_area("Logs", "Aucun log disponible.", height=300, key="logs_realtime_empty")  # Unique key
 
-        st.success("Traitement terminé avec succès.")
-                
-    except Exception as e:
-        st.error(f"Erreur pendant le traitement : {e}")
-        if candidate_data is None:
-            st.error("Failed to process the CV. Check logs below.")
-            st.write("No candidate data found.")
-            st.stop()
-
-        # Display structured data
+        # Debug structured data
         st.write("Structured Data from AI:")
         st.json(candidate_data)
 
         # Generate the CV
         processed_file_path = generate_cv(template_path, candidate_data, output_path)
+
+        # Check if the CV was successfully generated
         if processed_file_path:
+            st.write(f"Processed file path: {processed_file_path}")  # Debugging output
             st.success("CV processed successfully!")
             with open(processed_file_path, "rb") as processed_file:
                 st.download_button(
                     label="Download Processed CV",
                     data=processed_file,
-                    file_name=os.path.basename(processed_file_path),  # Use the file name directly
+                    file_name=os.path.basename(processed_file_path),
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 )
         else:
             st.error("Failed to generate the CV. Check logs below.")
-
     except Exception as e:
         st.error(f"An error occurred during processing: {e}")
 
 # Display logs
-st.write("### Error Logs")
+st.write("### Logs")
 logs = get_logs()
 if logs.strip():
     st.text_area("Logs", logs, height=300)
