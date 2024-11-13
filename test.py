@@ -183,6 +183,7 @@ def generate_cv(template_path, data, output_path):
 
         doc = DocxTemplate(template_path)
         doc.render(data)  # Render the template with the data
+        logging.info("Template rendered successfully.")
         doc.save(output_path)
         logging.info(f"CV generated successfully at {output_path}")
         return output_path
