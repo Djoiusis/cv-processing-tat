@@ -139,13 +139,18 @@ def generate_cv(template_path, data, output_path):
         return
 
     try:
+        # Generate a unique file name for the output
+        unique_output_path = f"{output_path}_{uuid.uuid4().hex[:8]}.docx"
+
         # Load the template and render with structured data
         doc = DocxTemplate(template_path)
         doc.render(data)
-        doc.save(output_path)
-        logging.info(f"CV generated successfully at {output_path}")
+        doc.save(unique_output_path)
+        logging.info(f"CV generated successfully at {unique_output_path}")
+        return unique_output_path
     except Exception as e:
         logging.error(f"Error generating CV: {e}")
+        return None
 
 def main(pdf_path):
     # File paths
