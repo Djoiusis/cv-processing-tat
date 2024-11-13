@@ -8,26 +8,28 @@ import re
 import os
 from docxtpl import DocxTemplate
 import logging
+import tempfile
 from io import StringIO
 
 
-# Create a log buffer
-log_buffer = StringIO()
+# Create a temporary log file
+temp_log_file = tempfile.NamedTemporaryFile(delete=False, suffix=".txt")
+temp_log_file_path = temp_log_file.name  # Get the temporary file's path
+temp_log_file.close()  # Close the file so it can be opened by others
 
-# Configure logging
+# Configure logging to write to this temporary file
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.StreamHandler(log_buffer),  # Write logs to memory buffer
-        logging.FileHandler("process_log.txt"),  # Write logs to file
-    ],
+        logging.FileHandler(temp_log_file_path),  # Log to the temporary file
+        logging.StreamHandler(),  # Log to console for debugging
+    ]
 )
 
-def get_logs():
-    """Retrieve logs from the buffer for display in Streamlit."""
-    log_buffer.seek(0)  # Go to the beginning of the buffer
-    return log_buffer.read()
+def get_temp_log_path():
+    """Retrieve the path of the temporary log file."""
+    return temp_log_file_path
 
 # Set your OpenAI API key
 openai.api_key = "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"
