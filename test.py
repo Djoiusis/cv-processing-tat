@@ -168,18 +168,23 @@ def generate_cv(template_path, data, output_path):
         logging.info(f"Current working directory: {os.getcwd()}")
         logging.info(f"Files in directory: {os.listdir(os.getcwd())}")
         logging.info(f"Looking for template at: {template_path}")
-        # Generate a unique output file path
-        output_path = f"{output_path}.docx"
 
-        # Load the template and render with structured data
+        if not os.path.exists(template_path):
+            logging.error(f"Template file not found at {template_path}")
+            return None
+
+        # Ensure the output path ends with .docx
+        if not output_path.endswith(".docx"):
+            output_path += ".docx"
+
         doc = DocxTemplate(template_path)
         doc.render(data)
         doc.save(output_path)
         logging.info(f"CV generated successfully at {output_path}")
-        return output_path  # Return the generated file path
+        return output_path
     except Exception as e:
-         logging.error("Error generating CV", exc_info=True)
-         raise  # Re-raise the exception so it's handled upstream
+        logging.error(f"Error generating CV: {e}")
+        return None
 
 
 def main(pdf_path):
