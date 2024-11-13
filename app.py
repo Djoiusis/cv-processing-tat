@@ -21,11 +21,7 @@ if uploaded_file is not None:
     # Save the uploaded file to a temporary location
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as temp_file:
         temp_file.write(uploaded_file.read())
-        temp_file_path = temp_file.name  # Get the temporary file path
-
-    st.write("File uploaded successfully!")
-    st.write(f"Temporary file saved at: {temp_file_path}")
-    
+        temp_file_path = temp_file.name  # Get the temporary file path   
 
     st.write("File uploaded successfully!")
     try:
