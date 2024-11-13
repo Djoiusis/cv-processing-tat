@@ -211,6 +211,13 @@ def main(pdf_path):
         return
     
     # Step 3: Populate the template with data if extraction was successful
+    if not candidate_data or not isinstance(candidate_data, dict):
+        logging.error("Candidate data is invalid or missing. Aborting CV generation.")
+        st.error("Candidate data is invalid or missing. Please check the logs.")
+        st.stop()
+
+    # Log the structure of candidate_data
+    logging.info(f"Candidate data: {json.dumps(candidate_data, indent=2, ensure_ascii=False)}")
     generate_cv(template_path, candidate_data, output_path)
 
 if __name__ == "__main__":
