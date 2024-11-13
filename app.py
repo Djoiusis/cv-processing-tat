@@ -35,7 +35,7 @@ if uploaded_file is not None:
         # else:
         #    st.text_area("Logs", "Aucun log disponible.", height=300, key="logs_realtime_empty")  # Unique key
        
-        st.success("Traitement terminé avec succès.")
+        st.success("The CV has been processed to TAT format.")
 
     
                 
