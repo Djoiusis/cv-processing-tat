@@ -142,7 +142,7 @@ def structure_data_with_ai(text):
             with open('output_data.json', 'w') as json_file:
                 json.dump(structured_data, json_file, indent=4, ensure_ascii=False)
             logging.info("Structured data saved to output_data.json.")
-            
+            logging.info("Données structurées avec succès.")
             return structured_data
 
         except json.JSONDecodeError as e:
