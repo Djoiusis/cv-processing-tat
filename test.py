@@ -189,7 +189,7 @@ def structure_data_with_ai(text):
 
 
 
-def generate_cv(template_path, data, output_path):
+def generate_cv(template_path, data, output_path=None):
     """Generates the CV using the specified template and structured data."""
     try:
         logging.info(f"Current working directory: {os.getcwd()}")
