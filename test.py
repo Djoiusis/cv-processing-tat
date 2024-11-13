@@ -178,16 +178,27 @@ def generate_cv(template_path, data, output_path):
             logging.error("Invalid or missing data for CV generation.")
             return None
 
-        # Create a temporary file for the output
+        # Create a temporary file for the processed CV
         with tempfile.NamedTemporaryFile(delete=False, suffix=".docx") as temp_file:
-            output_path = temp_file.name
+            temp_file_path = temp_file.name
 
+        # Generate the CV and save it to the temporary file
         doc = DocxTemplate(template_path)
-        doc.render(data)  # Render the template with the data
+        doc.render(data)
         logging.info("Template rendered successfully.")
-        doc.save(output_path)
-        logging.info(f"CV generated successfully at {output_path}")
-        return output_path
+        doc.save(temp_file_path)
+        logging.info(f"CV generated successfully at {temp_file_path}")
+
+        # Provide the file for automatic download directly from `test.py`
+        with open(temp_file_path, "rb") as file:
+            st.download_button(
+                label="Download Processed CV",
+                data=file,
+                file_name="Processed_CV.docx",
+                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            )
+
+        return temp_file_path
     except Exception as e:
         logging.error(f"Error generating CV: {e}")
         return None
@@ -224,21 +235,10 @@ def main(pdf_path):
         logging.error("Failed to generate the CV.")
         return None
     logging.info(f"CV successfully generated at: {processed_file_path}")
-    
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".txt") as temp_file:
-        temp_file.write(b"This is the content of the processed file.\n")
-        temp_file_path = temp_file.name  # Save the path for downloading
+
 
     st.success(f"File created at: {temp_file_path}")
 
-    # Automatically download the file once processing is complete
-    with open(temp_file_path, "rb") as file:
-        st.download_button(
-            label="Download Processed File",
-            data=file,
-            file_name="processed_file.txt",
-            mime="text/plain"
-        )
     return processed_file_path
 
 
