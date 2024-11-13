@@ -1,5 +1,5 @@
 import streamlit as st
-from test import main as process_cv  # Import the updated main function
+from test import main as process_cv, get_logs  # Import get_logs function
 import os
 
 # Page layout: Title and logo
@@ -15,9 +15,6 @@ st.write("Upload a PDF file to process the CV")
 # File uploader
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
 
-# Path to log file
-log_file_path = "process_log.txt"
-
 if uploaded_file is not None:
     # Save the uploaded file to a temporary location
     pdf_path = "uploaded_cv.pdf"
@@ -28,33 +25,15 @@ if uploaded_file is not None:
 
     # Process the uploaded file
     try:
-        processed_file_path = process_cv(pdf_path)  # Process the uploaded PDF
-
-        if processed_file_path:
-            st.success("CV processed successfully!")
-
-            # Add download button for the dynamically generated CV
-            with open(processed_file_path, "rb") as f:
-                st.download_button(
-                    label="Download Processed CV",
-                    data=f,
-                    file_name="Processed_CV.docx",
-                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                )
-        else:
-            st.error("Failed to generate the CV.")
+        process_cv(pdf_path)  # Process the uploaded PDF
+        st.success("CV processed successfully!")
     except Exception as e:
         st.error(f"An error occurred: {e}")
 
-# Add a section for downloading the log file
-if os.path.exists(log_file_path):
-    st.write("Download Error Logs:")
-    with open(log_file_path, "rb") as log_file:
-        st.download_button(
-            label="Download Error Logs",
-            data=log_file,
-            file_name="error_logs.txt",
-            mime="text/plain"
-        )
+# Display logs on the screen
+st.write("### Error Logs")
+logs = get_logs()
+if logs.strip():  # If logs are not empty
+    st.text_area("Logs", logs, height=300)
 else:
-    st.write("No error logs available.")
+    st.write("No logs to display.")
