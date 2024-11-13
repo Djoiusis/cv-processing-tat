@@ -27,9 +27,8 @@ logging.basicConfig(
 )
 
 def get_logs():
-    """Récupère les logs à partir du buffer."""
-    log_buffer.seek(0)  # Repositionnez le curseur au début du buffer
-    return log_buffer.read()
+    log_buffer.seek(0)  # Move to the beginning of the buffer
+    return log_buffer.read() or "No logs found in buffer."
 
 # Set your OpenAI API key
 openai.api_key = "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"
