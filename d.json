@@ -1,25 +1,25 @@
 {
     "name": "Imrane TOUAMA",
-    "profile": "Analyste technique d'affaires avec 6 ans d'expérience en analyse fonctionnelle et technique dans les environnements .NET, spécialisé dans la collecte des besoins, la gestion de projets et la conception de solutions informatiques efficaces pour des projets internationaux. Expertise en Microsoft technologies telles que .NET, C#, Azure Cloud et Azure DevOps.",
-    "title": "Analyste d'affaires technique spécialisé en programmation",
+    "profile": "Analyste technique d'affaires avec 6 ans d'expÃ©rience en analyse fonctionnelle et technique dans les environnements .NET, spÃ©cialisÃ© dans la collecte des besoins, la gestion de projets et la conception de solutions informatiques efficaces pour des projets internationaux. Expertise en Microsoft technologies telles que .NET, C#, Azure Cloud et Azure DevOps.",
+    "title": "Analyste d'affaires technique spÃ©cialisÃ© en programmation",
     "education": [
         {
             "end_date": "Septembre 2021",
             "degree": "Master",
             "field": "Informatique",
-            "institution": "Institut d'Ingénierie et d'Analyse Informatique Poly Informatique de Lyon"
+            "institution": "Institut d'IngÃ©nierie et d'Analyse Informatique Poly Informatique de Lyon"
         },
         {
             "end_date": "Septembre 2019",
             "degree": "Licence",
             "field": "Sciences Informatiques et de Gestion",
-            "institution": "Université des Sciences Informatiques et de Gestion Lyon 1"
+            "institution": "UniversitÃ© des Sciences Informatiques et de Gestion Lyon 1"
         },
         {
             "end_date": "Septembre 2018",
             "degree": "Technicien",
             "field": "Programmation Informatique",
-            "institution": "Université Lyon 1"
+            "institution": "UniversitÃ© Lyon 1"
         }
     ],
     "age": "",
@@ -28,16 +28,16 @@
             "start_date": "01.2024",
             "end_date": "10.2024",
             "company": "Valtech",
-            "location": "Genève",
-            "position": "Développeur de logiciels et analyste d'affaires",
+            "location": "GenÃ¨ve",
+            "position": "DÃ©veloppeur de logiciels et analyste d'affaires",
             "clients": "",
             "projects": [
                 {
-                    "name": "Implémentation d'un outil d'échange de données ETL en .NET 4",
-                    "description": "Outil de développeur et analyste d'affaires pour rationaliser l'intégration des données.",
+                    "name": "ImplÃ©mentation d'un outil d'Ã©change de donnÃ©es ETL en .NET 4",
+                    "description": "Outil de dÃ©veloppeur et analyste d'affaires pour rationaliser l'intÃ©gration des donnÃ©es.",
                     "missions": [
-                        "Conception et gestion de bases de données relationnelles",
-                        "Développement de tableaux de bord interactifs"
+                        "Conception et gestion de bases de donnÃ©es relationnelles",
+                        "DÃ©veloppement de tableaux de bord interactifs"
                     ]
                 }
             ],
@@ -52,16 +52,16 @@
             "start_date": "07.2023",
             "end_date": "01.2024",
             "company": "ISO (Organisation internationale de normalisation)",
-            "location": "Vernier, Genève",
+            "location": "Vernier, GenÃ¨ve",
             "position": "Consultant en support et analyste d'affaires",
             "clients": "",
             "projects": [
                 {
                     "name": "Mise en place de l'outil de support principal Help Scout",
-                    "description": "Amélioration des réponses aux clients et développement de base de connaissances.",
+                    "description": "AmÃ©lioration des rÃ©ponses aux clients et dÃ©veloppement de base de connaissances.",
                     "missions": [
-                        "Développement de système de ticket avec Jira",
-                        "Création d'équipe de support technique"
+                        "DÃ©veloppement de systÃ¨me de ticket avec Jira",
+                        "CrÃ©ation d'Ã©quipe de support technique"
                     ]
                 }
             ],
@@ -75,15 +75,15 @@
             "end_date": "06.2023",
             "company": "Le Groupe Adecco",
             "location": "Zurich et Lyon",
-            "position": "Ingénieur logiciel et analyste d'affaires",
+            "position": "IngÃ©nieur logiciel et analyste d'affaires",
             "clients": "",
             "projects": [
                 {
-                    "name": "Développement de fonctionnalités API sur une plateforme Cloud",
+                    "name": "DÃ©veloppement de fonctionnalitÃ©s API sur une plateforme Cloud",
                     "description": "Utilisation de technologies Microsoft comme Azure, .NET4 C# et Azure DevOps.",
                     "missions": [
-                        "Gestion complète de projet",
-                        "Rédaction de documents opérationnels"
+                        "Gestion complÃ¨te de projet",
+                        "RÃ©daction de documents opÃ©rationnels"
                     ]
                 }
             ],
@@ -99,14 +99,14 @@
             "end_date": "09.2021",
             "company": "Groupe Eiffage",
             "location": "Lyon",
-            "position": "Développeur Web",
+            "position": "DÃ©veloppeur Web",
             "clients": "",
             "projects": [
                 {
-                    "name": "Développement d'un outil pour les techniciens",
-                    "description": "Outil pour audits et contrôles de sécurité.",
+                    "name": "DÃ©veloppement d'un outil pour les techniciens",
+                    "description": "Outil pour audits et contrÃ´les de sÃ©curitÃ©.",
                     "missions": [
-                        "Développement d'outils QHSE",
+                        "DÃ©veloppement d'outils QHSE",
                         "Participation en tant que Business Analyst"
                     ]
                 }
@@ -124,7 +124,7 @@
             "proficiency": "Certification C1"
         },
         {
-            "name": "Français",
+            "name": "FranÃ§ais",
             "proficiency": ""
         }
     ],
@@ -142,13 +142,13 @@
             "JavaScript"
         ],
         "project_skills": [
-            "Collaboration et travail d'équipe",
+            "Collaboration et travail d'Ã©quipe",
             "Organisation et gestion du temps",
             "Communication",
-            "Résolution de problèmes",
-            "Pensée critique",
-            "Flexibilité et adaptabilité",
-            "Écoute active"
+            "RÃ©solution de problÃ¨mes",
+            "PensÃ©e critique",
+            "FlexibilitÃ© et adaptabilitÃ©",
+            "Ã‰coute active"
         ]
     }
 }
