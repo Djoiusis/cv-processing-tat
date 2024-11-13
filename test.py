@@ -34,7 +34,7 @@ def get_logs():
 
 # Set your OpenAI API key
 st.write("Available secrets:", list(st.secrets.keys()))
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+openai.api_key = st.secrets["general"]["OPENAI_API_KEY"]
 
 # Display logs in the app
 st.write("### Error Logs")
