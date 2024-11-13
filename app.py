@@ -2,7 +2,7 @@ import streamlit as st
 from test import main as process_cv, generate_cv, get_logs
 import os
 
-# Initialize session state to prevent double processing
+# Initialize session state to avoid redundant calls
 if "candidate_data" not in st.session_state:
     st.session_state["candidate_data"] = None
 if "processed_file_path" not in st.session_state:
@@ -15,7 +15,9 @@ st.write("Upload a PDF file to process the CV")
 # File uploader
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
 template_path = "CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.docx"
-output_path = "Processed_CV"
+output_path = "CV_Output_Formatted.docx"
+
+# Display real-time logs
 st.write("### Logs en Temps Réel")
 log_box = st.empty()  # Placeholder for logs
 
@@ -27,8 +29,9 @@ if uploaded_file is not None:
     st.write("File uploaded successfully!")
 
     try:
-        # Process the PDF and structure data only if not already done
+        # Process the PDF and structure data
         if st.session_state["candidate_data"] is None:
+            st.write("Processing the uploaded file...")
             st.session_state["candidate_data"] = process_cv(pdf_path)
 
         candidate_data = st.session_state["candidate_data"]
@@ -40,11 +43,12 @@ if uploaded_file is not None:
             st.stop()
 
         # Display structured data
-        st.write("Structured Data from AI:")
+        st.write("### Structured Data from AI")
         st.json(candidate_data)
 
         # Generate the CV only if not already done
         if st.session_state["processed_file_path"] is None:
+            st.write("Generating the formatted CV...")
             st.session_state["processed_file_path"] = generate_cv(template_path, candidate_data, output_path)
 
         processed_file_path = st.session_state["processed_file_path"]
@@ -70,7 +74,7 @@ if uploaded_file is not None:
             st.text_area("Logs", "Aucun log disponible.", height=300, key="logs_realtime_empty")  # Unique key
 
     except Exception as e:
-        st.error(f"Erreur pendant le traitement : {e}")
+        st.error(f"An error occurred: {e}")
 
 # Display error logs at the end
 st.write("### Error Logs")
