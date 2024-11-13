@@ -195,8 +195,8 @@ def generate_cv(template_path, data, output_path):
         logging.info(f"Current working directory: {os.getcwd()}")
         logging.info(f"Files in directory: {os.listdir(os.getcwd())}")
         logging.info(f"Looking for template at: {template_path}")
-         # Cleanup previous output files
-         cleanup_output_files("*.docx", exclude_files=[template_path])
+        # Cleanup previous output files
+        cleanup_output_files("*.docx", exclude_files=[template_path])
 
         if not os.path.exists(template_path):
             logging.error(f"Template file not found at {template_path}")
