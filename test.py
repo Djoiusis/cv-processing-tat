@@ -35,16 +35,7 @@ def get_logs():
     return log_buffer.read() or "No logs found in buffer."
 
 # Set your OpenAI API key
-st.write("Available secrets:", list(st.secrets.keys()))
 openai.api_key = st.secrets["general"]["OPENAI_API_KEY"]
-
-# Display logs in the app
-st.write("### Error Logs")
-logs = get_logs()
-if logs.strip():
-    st.text_area("Logs", logs, height=300)
-else:
-    st.write("No logs to display.")
 
 
 def cleanup_output_files(pattern="*.docx", exclude_files=None):
