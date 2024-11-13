@@ -14,32 +14,23 @@ from io import StringIO
 
 
 
-# Temporary log file setup
-temp_log_file = tempfile.NamedTemporaryFile(delete=False, suffix=".txt")
-temp_log_file_path = temp_log_file.name  # Get the temporary file path
-temp_log_file.close()  # Close the file so it can be used elsewhere
+# Création d'un buffer pour stocker les logs
+log_buffer = StringIO()
 
-# Configure logging
+# Configuration des logs
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.INFO,  # Niveau des logs (INFO, DEBUG, ERROR)
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler(temp_log_file_path),  # Log to the temporary file
-        logging.StreamHandler(),  # Log to console
+        logging.StreamHandler(log_buffer),  # Écriture des logs dans le buffer
     ],
 )
 
+# Fonction pour récupérer les logs
 def get_logs():
-    """Retrieve logs from the temporary log file."""
-    try:
-        with open(temp_log_file_path, "r") as log_file:
-            return log_file.read()
-    except FileNotFoundError:
-        return "No logs available."
-
-def get_temp_log_path():
-    """Retrieve the path of the temporary log file."""
-    return temp_log_file_path
+    """Retourne les logs du buffer."""
+    log_buffer.seek(0)  # Déplace le curseur au début du buffer
+    return log_buffer.read()
 
 # Set your OpenAI API key
 openai.api_key = "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"
