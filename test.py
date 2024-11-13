@@ -223,7 +223,6 @@ def main(pdf_path):
     # Generate the CV
     processed_file_path = generate_cv(template_path, candidate_data, output_path)
     if not processed_file_path:
-        logging.error("Failed to generate the CV. Aborting.")
         return None  # Explicitly return None
 
     # Log success
