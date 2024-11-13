@@ -26,8 +26,8 @@ if uploaded_file is not None:
             logs = get_logs()
             log_box.text_area("Logs", logs, height=300)
                 
-        except Exception as e:
-            st.error(f"Erreur pendant le traitement : {e}")
+    except Exception as e:
+        st.error(f"Erreur pendant le traitement : {e}")
         if candidate_data is None:
             st.error("Failed to process the CV. Check logs below.")
             st.write("No candidate data found.")
