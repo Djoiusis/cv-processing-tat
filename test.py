@@ -9,9 +9,6 @@ from docxtpl import DocxTemplate
 import logging
 from io import StringIO
 
-logging.info(f"Current working directory: {os.getcwd()}")
-logging.info(f"Files in directory: {os.listdir(os.getcwd())}")
-logging.info(f"Looking for template at: {template_path}")
 
 # Create a log buffer for capturing logs
 log_buffer = StringIO()
