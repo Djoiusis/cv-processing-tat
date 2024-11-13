@@ -3,9 +3,13 @@ import tempfile
 from test import main as process_cv, generate_cv, get_logs
 import os
 
-# Page layout
-st.title("CV Processing App")
-st.write("Upload a PDF file to process the CV")
+ Page layout with logo
+col1, col2 = st.columns([3, 1])  # Create two columns for layout
+with col1:
+    st.title("CV Processing App")  # Add your title
+    st.write("Upload a PDF file to process the CV")
+with col2:
+    st.image("logo.png", use_column_width=True)  # Add your logo
 
 # File uploader
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
