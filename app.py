@@ -19,11 +19,11 @@ if uploaded_file is not None:
         f.write(uploaded_file.getbuffer())
 
     st.write("File uploaded successfully!")
-
+    log_container = st.empty()
     try:
         # Appeler process_cv pour traiter le fichier PDF
         candidate_data = None
-        log_container = st.empty()
+      
         # Mettre à jour les logs en temps réel
         logs = ""  # Initialiser les logs comme une chaîne vide
         while True:
