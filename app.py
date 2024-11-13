@@ -24,13 +24,23 @@ if uploaded_file is not None:
         # Appeler process_cv pour traiter le fichier PDF
         candidate_data = None
       
+        # Initialiser les logs et un compteur pour les clés uniques
+        iteration = 0
+        logs = ""
+
         # Mettre à jour les logs en temps réel
-        logs = ""  # Initialiser les logs comme une chaîne vide
         while True:
             logs = get_logs()  # Obtenir les logs actuels
-            log_container.text_area("Logs", logs, height=300)  # Mettre à jour le contenu sans recréer l'élément
+            log_container.text_area(
+                "Logs",
+                logs,
+                height=300,
+                key=f"log_area_{iteration}"  # Assurer une clé unique à chaque itération
+            )
+            iteration += 1  # Incrémenter le compteur pour la clé
             if "Données structurées avec succès." in logs or "Erreur inattendue" in logs:
-                  break  # Arrêter la boucle une fois le traitement terminé ou en cas d'erreur
+                break  # Sortir de la boucle lorsque le traitement est terminé
+                    
         # Process the CV
         candidate_data = process_cv(pdf_path)
                 
