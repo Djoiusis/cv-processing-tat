@@ -23,30 +23,30 @@ if uploaded_file is not None:
     log_key = "log_area"
     log_container = st.empty()
     try:
-        # Appeler process_cv pour traiter le fichier PDF
-        candidate_data = None
+  
+        candidate_data = process_cv(pdf_path)
+        # Counter for unique keys
+        iteration = 0
 
-        # Mettre à jour les logs en temps réel
+        # Boucle pour mettre à jour les logs
         while True:
-            logs = get_logs()  # Récupérer les logs actuels
-            # Update the container dynamically
+            logs = get_logs()
+
+            # Mettre à jour les logs avec une clé unique
             log_container.text_area(
                 "Logs",
                 logs if logs.strip() else "Aucun log pour le moment.",
                 height=300,
-                key=log_key,  # Assign a unique key
+                key=f"log_area_{iteration}"  # Générer une clé unique
             )
- # Mettre à jour le contenu du conteneur unique
 
+            iteration += 1  # Incrémenter le compteur pour la clé
 
-                
+            # Sortir de la boucle si le traitement est terminé
             if "Données structurées avec succès." in logs or "Erreur inattendue" in logs:
-                break  # Arrêter la boucle une fois terminé
+                break
 
-        st.success("Traitement terminé.")
-                    
-        # Process the CV
-        candidate_data = process_cv(pdf_path)
+            st.success("Traitement terminé avec succès.")
                 
     except Exception as e:
         st.error(f"Erreur pendant le traitement : {e}")
