@@ -27,9 +27,14 @@ if uploaded_file is not None:
         # Mettre à jour les logs en temps réel
         while True:
             logs = get_logs()  # Récupérer les logs actuels
+            # Update the container dynamically
             log_container.text_area(
-                "Logs", logs or "Aucun log pour le moment.", height=300
-            )  # Mettre à jour le contenu du conteneur unique
+                "Logs",
+                logs if logs.strip() else "Aucun log pour le moment.",
+                height=300,
+                key=log_key,  # Assign a unique key
+            )
+ # Mettre à jour le contenu du conteneur unique
 
 
                 
