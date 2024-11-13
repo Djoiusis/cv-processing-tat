@@ -14,7 +14,7 @@ with col2:
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
 template_path = "CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.docx"
 output_path = "/tmp/CV_Output_Formatted.docx"
-st.write("### Logs en Temps Réel")
+st.write("### Logs")
 log_box = st.empty()  # Place un conteneur pour les logs
 
 if uploaded_file is not None:
