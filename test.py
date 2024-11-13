@@ -7,10 +7,24 @@ import re
 import os
 from docxtpl import DocxTemplate
 import logging
+from io import StringIO
 
-# Set up logging
-logging.basicConfig(filename='process_log.txt', level=logging.INFO, 
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+# Create a string buffer for logs
+log_buffer = StringIO()
+
+# Configure logging to write to the string buffer
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(log_buffer)  # Stream logs to the buffer
+    ]
+)
+
+# Use this function to retrieve logs for display
+def get_logs():
+    log_buffer.seek(0)  # Move to the beginning of the buffer
+    return log_buffer.read()
 
 # Set your OpenAI API key
 openai.api_key = "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"
