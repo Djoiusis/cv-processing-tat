@@ -8,7 +8,7 @@ with col1:
     st.title("CV Processing App")  # Add your title
     st.write("Upload a PDF file to process the CV")
 with col2:
-    st.image("logo.png", use_column_width=True)  # Add your logo
+    st.image("logo.png", width=150)  # Add your logo
 
 # File uploader
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
