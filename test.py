@@ -162,7 +162,7 @@ def generate_cv(template_path, data, output_path):
         return output_path  # Return the generated file path
     except Exception as e:
          logging.error("Error generating CV", exc_info=True)
-        raise  # Re-raise the exception so it's handled upstream
+         raise  # Re-raise the exception so it's handled upstream
 
 
 def main(pdf_path):
