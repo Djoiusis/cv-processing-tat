@@ -1,6 +1,7 @@
 import pdfplumber
 import json
 import openai
+from openai.error import RateLimitError
 import time
 import datetime
 import re
