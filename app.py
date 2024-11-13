@@ -1,5 +1,5 @@
 import streamlit as st
-from test import main as process_cv, get_temp_log_path, get_logs
+from test import main as process_cv, get_logs, get_temp_log_path, generate_cv
 import os
 
 # Page layout: Title and logo
@@ -15,18 +15,38 @@ st.write("Upload a PDF file to process the CV")
 # File uploader
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
 
+# Template and output paths
+template_path = "CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.docx"  # Ensure this file exists
+output_path = "Processed_CV"  # Name for the generated CV file
+
+# Process the uploaded file
 if uploaded_file is not None:
-    # Save the uploaded file to a temporary location
     pdf_path = "uploaded_cv.pdf"
     with open(pdf_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
-
     st.write("File uploaded successfully!")
 
-    # Process the uploaded file
     try:
-        process_cv(pdf_path)  # Process the uploaded PDF
-        st.success("CV processed successfully!")
+        # Step 1: Process the uploaded PDF
+        candidate_data = process_cv(pdf_path)  # Replace with your AI processing pipeline
+        if candidate_data is None:
+            st.error("Failed to process the CV. Check logs below.")
+        else:
+            # Step 2: Generate the CV
+            processed_file_path = generate_cv(template_path, candidate_data, output_path)
+            if processed_file_path:
+                st.success("CV processed successfully!")
+
+                # Step 3: Provide a download button for the processed CV
+                with open(processed_file_path, "rb") as processed_file:
+                    st.download_button(
+                        label="Download Processed CV",
+                        data=processed_file,
+                        file_name="Processed_CV.docx",
+                        mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    )
+            else:
+                st.error("Failed to generate the CV. Check logs below.")
     except Exception as e:
         st.error(f"An error occurred during processing: {e}")
 
