@@ -19,6 +19,8 @@ if uploaded_file is not None:
         f.write(uploaded_file.getbuffer())
 
     st.write("File uploaded successfully!")
+    # Create a unique key for the text_area
+    log_key = "log_area"
     log_container = st.empty()
     try:
         # Appeler process_cv pour traiter le fichier PDF
