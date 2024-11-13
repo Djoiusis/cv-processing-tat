@@ -27,7 +27,7 @@ if uploaded_file is not None:
         # Mettre à jour les logs en temps réel
         while True:
             logs = get_logs()
-            log_box.text_area("Logs", logs, height=300, key="log_area")  # Utilise un seul key fixe
+            log_box.text_area("Logs", logs, height=300)  # Utilise un seul key fixe
             if "Données structurées avec succès." in logs or "Erreur inattendue" in logs:
                 break  # Stop la boucle si le traitement est terminé
         # Process the CV
