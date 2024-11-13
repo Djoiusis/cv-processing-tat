@@ -30,16 +30,16 @@ if uploaded_file is not None:
 
         # Mettre à jour les logs en temps réel
         while True:
-            logs = get_logs()  # Obtenir les logs actuels
-            log_container.text_area(
-                "Logs",
-                logs,
-                height=300,
-                key=f"log_area_{iteration}"  # Assurer une clé unique à chaque itération
-            )
-            iteration += 1  # Incrémenter le compteur pour la clé
-            if "Données structurées avec succès." in logs or "Erreur inattendue" in logs:
-                break  # Sortir de la boucle lorsque le traitement est terminé
+                logs = get_logs()  # Obtenir les logs depuis le buffer
+                if logs.strip():  # Vérifiez si des logs existent
+                    log_container.text_area("Logs", logs, height=300)
+                else:
+                    log_container.text_area("Logs", "Aucun log pour le moment.", height=300)
+                
+                if "Données structurées avec succès." in logs or "Erreur inattendue" in logs:
+                    break  # Arrêter la boucle une fois terminé
+
+            st.success("Traitement terminé.")
                     
         # Process the CV
         candidate_data = process_cv(pdf_path)
