@@ -101,7 +101,7 @@ def structure_data_with_ai(text):
         }
     ]
 
-  wait_time = 30  # Start with a 30-second wait time
+    wait_time = 30  # Start with a 30-second wait time
     for attempt in range(5):  # Retry up to 5 times
         try:
             response = openai.ChatCompletion.create(
