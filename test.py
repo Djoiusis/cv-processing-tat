@@ -218,7 +218,13 @@ def main(pdf_path):
         st.error("Candidate data is invalid or missing. Please check the logs.")
         st.stop()
 
+     # Step 3: Generate the CV
     processed_file_path = generate_cv(template_path, candidate_data, output_path)
+    if not processed_file_path:
+        logging.error("Failed to generate the CV.")
+        return None
+
+    return processed_file_path
 
 
 if __name__ == "__main__":
