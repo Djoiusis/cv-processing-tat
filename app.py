@@ -15,6 +15,9 @@ st.write("Upload a PDF file to process the CV")
 # File uploader
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
 
+# Variable to store processed file path
+processed_file_path = None
+
 if uploaded_file is not None:
     # Save the uploaded file to a temporary location
     pdf_path = "uploaded_cv.pdf"
@@ -25,10 +28,23 @@ if uploaded_file is not None:
 
     # Process the uploaded file
     try:
-        process_cv(pdf_path)  # Process the uploaded PDF
-        st.success("CV processed successfully!")
+        processed_file_path = process_cv(pdf_path)  # Process the uploaded PDF
+        if processed_file_path:
+            st.success("CV processed successfully!")
+        else:
+            st.error("Failed to generate the CV.")
     except Exception as e:
         st.error(f"An error occurred: {e}")
+
+# Add the download button for the processed CV
+if processed_file_path:
+    with open(processed_file_path, "rb") as processed_file:
+        st.download_button(
+            label="Download Processed CV",
+            data=processed_file,
+            file_name="Processed_CV.docx",
+            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        )
 
 # Display logs on the screen
 st.write("### Error Logs")
