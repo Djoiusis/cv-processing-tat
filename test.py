@@ -12,20 +12,28 @@ import tempfile
 from io import StringIO
 
 
-# Create a temporary log file
+# Temporary log file setup
 temp_log_file = tempfile.NamedTemporaryFile(delete=False, suffix=".txt")
-temp_log_file_path = temp_log_file.name  # Get the temporary file's path
-temp_log_file.close()  # Close the file so it can be opened by others
+temp_log_file_path = temp_log_file.name  # Get the temporary file path
+temp_log_file.close()  # Close the file so it can be used elsewhere
 
-# Configure logging to write to this temporary file
+# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
         logging.FileHandler(temp_log_file_path),  # Log to the temporary file
-        logging.StreamHandler(),  # Log to console for debugging
-    ]
+        logging.StreamHandler(),  # Log to console
+    ],
 )
+
+def get_logs():
+    """Retrieve logs from the temporary log file."""
+    try:
+        with open(temp_log_file_path, "r") as log_file:
+            return log_file.read()
+    except FileNotFoundError:
+        return "No logs available."
 
 def get_temp_log_path():
     """Retrieve the path of the temporary log file."""
