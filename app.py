@@ -1,5 +1,5 @@
 import streamlit as st
-from test import main as process_cv, get_logs  # Import get_logs function
+from test import main as process_cv, get_logs  # Import logging
 import os
 
 # Page layout: Title and logo
@@ -32,19 +32,9 @@ if uploaded_file is not None:
         if processed_file_path:
             st.success("CV processed successfully!")
         else:
-            st.error("Failed to generate the CV.")
+            st.error("Failed to generate the CV. Check logs below.")
     except Exception as e:
-        st.error(f"An error occurred: {e}")
-
-# Add the download button for the processed CV
-if processed_file_path:
-    with open(processed_file_path, "rb") as processed_file:
-        st.download_button(
-            label="Download Processed CV",
-            data=processed_file,
-            file_name="Processed_CV.docx",
-            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-        )
+        st.error(f"An error occurred during processing: {e}")
 
 # Display logs on the screen
 st.write("### Error Logs")
