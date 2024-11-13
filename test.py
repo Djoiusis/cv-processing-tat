@@ -102,51 +102,50 @@ def structure_data_with_ai(text):
         }
     ]
 
+     # Exponential backoff retry mechanism for handling RateLimitError
     wait_time = 30  # Start with a 30-second wait time
     for attempt in range(5):  # Retry up to 5 times
         try:
             response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
+                model="gpt-3.5-turbo",  # Use gpt-3.5-turbo or gpt-4-turbo if accessible
                 messages=messages,
                 max_tokens=1500
             )
             raw_output = response.choices[0].message['content'].strip()
             logging.info("Data successfully structured by AI.")
-            logging.debug(f"Raw AI response: {raw_output}")
-
-            # Clean the raw output and attempt to parse as JSON
+            # Clean the raw output to ensure it starts and ends with curly braces
             cleaned_output = re.sub(r'^[^{]*|[^}]*$', '', raw_output)
-            structured_data = json.loads(cleaned_output)
 
-            # Apply date formatting to experience dates
+            # Attempt to parse the cleaned JSON
+            structured_data = json.loads(cleaned_output)
+            
+    # Apply date formatting to experience dates
             for exp in structured_data.get("experience", []):
                 original_start = exp.get("start_date", "")
                 original_end = exp.get("end_date", "")
                 exp["start_date"] = format_date(original_start)
                 exp["end_date"] = format_date(original_end)
                 logging.info(f"Formatted '{original_start}' to '{exp['start_date']}', '{original_end}' to '{exp['end_date']}'")
-
-            # Save structured data to a JSON file
+            
+            # Save the structured data to an output JSON file
             with open('output_data.json', 'w') as json_file:
                 json.dump(structured_data, json_file, indent=4, ensure_ascii=False)
             logging.info("Structured data saved to output_data.json.")
-
+            
             return structured_data
 
         except json.JSONDecodeError as e:
-            logging.error(f"JSON decoding error: {e}. Raw output: {raw_output}")
-            return None  # Stop further attempts if JSON parsing fails
+            logging.error(f"JSON decoding error: {e}")
+            continue  # Skip to the next attempt
 
-        except RateLimitError:
+        except openai.error.RateLimitError:
             logging.warning(f"Rate limit exceeded. Retrying in {wait_time} seconds...")
             time.sleep(wait_time)
             wait_time *= 2  # Exponential backoff
 
         except Exception as e:
-            logging.error(f"An unexpected error occurred: {e}", exc_info=True)
-            return None
-
-    logging.error("Exceeded maximum retry attempts for AI processing.")
+            logging.error(f"An unexpected error occurred while structuring data with AI: {e}")
+            break
     return None
 
 
