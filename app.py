@@ -1,5 +1,5 @@
 import streamlit as st
-from test import main as process_cv, get_logs  # Import logging
+from test import main as process_cv, get_logs  # Import get_logs function
 import os
 
 # Page layout: Title and logo
