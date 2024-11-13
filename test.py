@@ -189,7 +189,7 @@ def structure_data_with_ai(text):
 
 
 
-def generate_cv(template_path, data, output_path=None):
+def generate_cv(template_path, data, output_path):
     """Generates the CV using the specified template and structured data."""
     try:
         logging.info(f"Current working directory: {os.getcwd()}")
@@ -201,7 +201,6 @@ def generate_cv(template_path, data, output_path=None):
         if not os.path.exists(template_path):
             logging.error(f"Template file not found at {template_path}")
             return None
-        logging.info(f"generate_cv called with template_path={template_path}, output_path={output_path}")
 
         if data is None or not isinstance(data, dict):
             logging.error("Invalid or missing data for CV generation.")
@@ -239,7 +238,7 @@ def main(pdf_path):
     # File paths
     logging.info(f"Début du traitement du fichier : {pdf_path}")
     template_path = 'CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.docx'
-    
+    output_path = 'CV_Output_Formatted.docx'
     # Step 1: Extract text from PDF
     pdf_text = extract_text_from_pdf(pdf_path)
     if pdf_text is None:
