@@ -44,15 +44,16 @@ openai.api_key = "sk-proj-2TItVF5KqBNc3T0E5ZjXSNFOGwwnfPFisDuccfKWq5ZuxoC9IhwmV6
 
 
 def extract_text_from_pdf(pdf_path):
-    """Extracts all text from a PDF file."""
+    """Extract text from a PDF file."""
     try:
         with pdfplumber.open(pdf_path) as pdf:
             text = "".join(page.extract_text() for page in pdf.pages)
-        logging.info("PDF text extracted successfully.")
+        logging.info(f"Extracted text length: {len(text)} characters")
         return text
     except Exception as e:
-        logging.error(f"Error extracting text from PDF: {e}")
+        logging.error(f"Error extracting text from PDF: {e}", exc_info=True)
         return None
+
 
 def format_date(date_str):
     """Convert French or English date strings like 'Septembre 2021' to 'MM.YYYY' format."""
