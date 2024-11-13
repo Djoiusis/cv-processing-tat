@@ -27,6 +27,7 @@ if uploaded_file is not None:
     try:
   
         candidate_data = process_cv(temp_file_path)
+         """
         # Display logs from `test.py`
         logs = get_logs()
         print("Current logs:", logs)
@@ -34,7 +35,7 @@ if uploaded_file is not None:
             st.text_area("Logs", logs, height=300, key="logs_realtime")  # Unique key
         else:
             st.text_area("Logs", "Aucun log disponible.", height=300, key="logs_realtime_empty")  # Unique key
-
+        """
         st.success("Traitement terminé avec succès.")
 
     
