@@ -239,7 +239,7 @@ def main(pdf_path):
     # File paths
     logging.info(f"Début du traitement du fichier : {pdf_path}")
     template_path = 'CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.docx'
-    output_path = 'CV_Output_Formatted.docx'
+    output_path = 'CV.docx'
     
     # Step 1: Extract text from PDF
     pdf_text = extract_text_from_pdf(pdf_path)
