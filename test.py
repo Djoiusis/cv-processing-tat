@@ -11,17 +11,17 @@ import logging
 from io import StringIO
 
 
-# Create a log buffer for capturing logs
+# Create a log buffer
 log_buffer = StringIO()
 
-# Configure logging to write to both the buffer and the console
+# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.StreamHandler(log_buffer),  # Log to the buffer for Streamlit display
-        logging.StreamHandler()  # Log to the console for debugging during development
-    ]
+        logging.StreamHandler(log_buffer),  # Write logs to memory buffer
+        logging.FileHandler("process_log.txt"),  # Write logs to file
+    ],
 )
 
 def get_logs():
