@@ -10,6 +10,8 @@ st.write("Upload a PDF file to process the CV")
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
 template_path = "CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.docx"
 output_path = "Processed_CV"
+st.write("### Logs en Temps Réel")
+log_box = st.empty()  # Place un conteneur pour les logs
 
 if uploaded_file is not None:
     pdf_path = "uploaded_cv.pdf"
@@ -17,16 +19,19 @@ if uploaded_file is not None:
         f.write(uploaded_file.getbuffer())
 
     st.write("File uploaded successfully!")
-    st.write("### Logs en Temps Réel")
-    log_box = st.empty()  # Place un conteneur pour les logs
+
     try:
-        # Process the CV
-        candidate_data = process_cv(pdf_path)
+        # Appeler process_cv pour traiter le fichier PDF
+        candidate_data = None
+
+        # Mettre à jour les logs en temps réel
         while True:
             logs = get_logs()
-            log_box.text_area("Logs", logs, height=300)
+            log_box.text_area("Logs", logs, height=300, key="log_area")  # Utilise un seul key fixe
             if "Données structurées avec succès." in logs or "Erreur inattendue" in logs:
-                break  # Stop si le traitement est terminé ou en cas d'erreur
+                break  # Stop la boucle si le traitement est terminé
+        # Process the CV
+        candidate_data = process_cv(pdf_path)
                 
     except Exception as e:
         st.error(f"Erreur pendant le traitement : {e}")
