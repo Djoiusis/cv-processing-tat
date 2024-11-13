@@ -7,6 +7,7 @@ import streamlit as st
 import datetime
 import re
 import os
+import glob
 from docxtpl import DocxTemplate
 import logging
 import tempfile
@@ -28,6 +29,7 @@ logging.basicConfig(
     ],
 )
 
+
 def get_logs():
     log_buffer.seek(0)  # Move to the beginning of the buffer
     return log_buffer.read() or "No logs found in buffer."
@@ -43,6 +45,22 @@ if logs.strip():
     st.text_area("Logs", logs, height=300)
 else:
     st.write("No logs to display.")
+
+
+def cleanup_output_files(pattern="*.docx"):
+    """Delete all output files matching the specified pattern."""
+    try:
+        # Find all files matching the pattern in the current working directory
+        files_to_delete = glob.glob(pattern)
+
+        # Iterate and remove each file
+        for file_path in files_to_delete:
+            os.remove(file_path)
+            logging.info(f"Deleted file: {file_path}")
+
+        logging.info("Cleanup completed successfully.")
+    except Exception as e:
+        logging.error(f"Error during cleanup: {e}")
     
 def extract_text_from_pdf(pdf_path):
     """Extract text from a PDF file."""
@@ -168,6 +186,8 @@ def generate_cv(template_path, data, output_path):
         logging.info(f"Current working directory: {os.getcwd()}")
         logging.info(f"Files in directory: {os.listdir(os.getcwd())}")
         logging.info(f"Looking for template at: {template_path}")
+         # Cleanup previous output files
+        cleanup_output_files("*.docx")
 
         if not os.path.exists(template_path):
             logging.error(f"Template file not found at {template_path}")
