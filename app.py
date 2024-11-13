@@ -12,7 +12,7 @@ template_path = "CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.doc
 output_path = "Processed_CV"
 st.write("### Logs en Temps Réel")
 log_box = st.empty()  # Place un conteneur pour les logs
-candidate_data = None  # Initialize candidate_data to prevent NameError
+
 if uploaded_file is not None:
     pdf_path = "uploaded_cv.pdf"
 
