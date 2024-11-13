@@ -236,9 +236,6 @@ def main(pdf_path):
         return None
     logging.info(f"CV successfully generated at: {processed_file_path}")
 
-
-    st.success(f"File created at: {temp_file_path}")
-
     return processed_file_path
 
 
