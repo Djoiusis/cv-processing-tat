@@ -28,9 +28,10 @@ if uploaded_file is not None:
         logs = get_logs()
         print("Current logs:", logs)
         if logs.strip():
-            st.text_area("Logs", logs, height=300)
+            st.text_area("Logs", logs, height=300, key="logs_realtime")  # Unique key
         else:
-            st.text_area("Logs", "Aucun log disponible.", height=300)
+            st.text_area("Logs", "Aucun log disponible.", height=300, key="logs_realtime_empty")  # Unique key
+
         st.success("Traitement terminé avec succès.")
                 
     except Exception as e:
