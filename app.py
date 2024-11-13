@@ -1,5 +1,5 @@
 import streamlit as st
-from cv_processing import generate_cv, get_logs, structure_data_with_ai, extract_text_from_pdf  # Import necessary functions
+from test import generate_cv, get_logs, structure_data_with_ai, extract_text_from_pdf  # Import necessary functions
 import os
 
 # Page layout: Title and logo
