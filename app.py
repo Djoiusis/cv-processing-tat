@@ -15,7 +15,6 @@ log_box = st.empty()  # Place un conteneur pour les logs
 
 if uploaded_file is not None:
     pdf_path = "uploaded_cv.pdf"
-@@ -22,50 +21,36 @@
 
     st.write("File uploaded successfully!")
     try:
