@@ -13,7 +13,7 @@ logging.basicConfig(filename='process_log.txt', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Set your OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 def extract_text_from_pdf(pdf_path):
