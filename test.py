@@ -112,7 +112,7 @@ def structure_data_with_ai(text):
                        f"- profile (a professional summary of the candidate's experience and expertise, formatted with line breaks for readability),\n"
                        f"- title (professional title or current job title),\n"
                        f"- education (list of educational qualifications with fields:\n"
-                       f"    * 'end_date' (graduation year or the year the degree was obtained, extract if present, otherwise leave empty),\n"
+                       f"    * 'end_date' (graduation year or the year the degree was obtained, look explicitly for numbers like '2018', '2021', etc.),\n"
                        f"    * 'degree' (e.g., Master, Bachelor, extract even if incomplete),\n"
                        f"    * 'field' (e.g., Computer Science, extract explicitly),\n"
                        f"    * 'institution' (e.g., University of Lyon, extract explicitly),\n"
