@@ -59,11 +59,3 @@ if uploaded_file is not None:
                 file_name="Processed_CV.docx",
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
             )
-
-# Display logs (optional)
-st.write("### Error Logs")
-logs = get_logs()
-if logs.strip():
-    st.text_area("Logs", logs, height=300)
-else:
-    st.write("No logs to display.")
