@@ -13,6 +13,11 @@ hide_streamlit_style = """
 
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
+# Initialize session state
+if "processed" not in st.session_state:
+    st.session_state["processed"] = False  # Whether the CV has been processed
+    st.session_state["file_path"] = None  # Path to the processed file
+
 col1, col2 = st.columns([3, 1])  # Create two columns for layout
 with col1:
     st.title("CV Processing App")  # Add your title
@@ -31,16 +36,29 @@ if uploaded_file is not None:
 
     st.write("File uploaded successfully!")
 
-    # Show a spinner while processing
-    with st.spinner("Processing the CV, please wait..."):
-        try:
-            # Call the processing function
-            process_cv(temp_file_path)  # This will handle downloading in `test.py`
+    # Check if the CV has already been processed
+    if not st.session_state["processed"]:
+        with st.spinner("Processing the CV, please wait..."):
+            try:
+                # Call the processing function and update session state
+                processed_file_path = process_cv(temp_file_path)
+                st.session_state["processed"] = True
+                st.session_state["file_path"] = processed_file_path
+                st.success("CV processed successfully. The file will be downloaded automatically.")
+            except Exception as e:
+                st.error(f"Error during processing: {e}")
+    else:
+        st.write("The CV has already been processed. You can download the file below:")
 
-            # Confirm success
-            st.success("CV processed successfully. The file will be downloaded automatically.")
-        except Exception as e:
-            st.error(f"Error during processing: {e}")
+    # Display download link if the file is ready
+    if st.session_state["file_path"]:
+        with open(st.session_state["file_path"], "rb") as processed_file:
+            st.download_button(
+                label="Download Processed CV",
+                data=processed_file,
+                file_name="Processed_CV.docx",
+                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            )
 
 # Display logs (optional)
 st.write("### Error Logs")
