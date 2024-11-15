@@ -27,8 +27,6 @@ output_path = "/tmp/CV_Output_Formatted.docx"
 # log_box = st.empty()  # Place un conteneur pour les logs
 st.title("Test Spinner")
 
-with st.spinner("Waiting..."):
-    time.sleep(5)
 
 st.success("Done!")
 if uploaded_file is not None:
