@@ -54,20 +54,3 @@ if uploaded_file is not None:
                 st.error(f"Error during processing: {e}")
                 st.session_state["logs"] = get_logs()
 
-# If a file has been processed, display the download button
-if st.session_state["processed_file"]:
-    with open(st.session_state["processed_file"], "rb") as processed_file:
-        st.download_button(
-            label="Download Processed CV",
-            data=processed_file,
-            file_name="Processed_CV.docx",
-            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-        )
-
-# Display logs (optional)
-st.write("### Error Logs")
-logs = st.session_state["logs"] if "logs" in st.session_state else get_logs()
-if logs.strip():
-    st.text_area("Logs", logs, height=300)
-else:
-    st.write("No logs to display.")
