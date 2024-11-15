@@ -10,6 +10,7 @@ hide_streamlit_style = """
     footer {visibility: hidden;}
     </style>
 """
+
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 col1, col2 = st.columns([3, 1])  # Create two columns for layout
