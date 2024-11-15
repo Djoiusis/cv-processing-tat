@@ -103,7 +103,7 @@ def structure_data_with_ai(text):
     messages = [
         {
             "role": "system",
-            "content": "You are an assistant that organizes CV text into structured JSON. Respond with only JSON format."
+            "content": "You are an assistant that organizes CV text into structured JSON. Respond with only JSON format. Output all data in French."
         },
         {
             "role": "user",
