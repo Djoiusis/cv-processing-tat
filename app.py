@@ -42,6 +42,7 @@ if uploaded_file is not None:
 
          with st.spinner("Processing the CV..."):
              candidate_data = process_cv(temp_file_path)
+             st.success("The CV has been processed to TAT format.")
      
         # logs = get_logs()
         # print("Current logs:", logs)
@@ -50,7 +51,7 @@ if uploaded_file is not None:
         # else:
         #    st.text_area("Logs", "Aucun log disponible.", height=300, key="logs_realtime_empty")  # Unique key
        
-        st.success("The CV has been processed to TAT format.")
+        
 
     
                 
