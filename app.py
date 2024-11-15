@@ -25,10 +25,7 @@ template_path = "CV-TalentAccessTechnologies-TechnicalBusinessAnalyst-DotNet.doc
 output_path = "/tmp/CV_Output_Formatted.docx"
 # st.write("### Logs")
 # log_box = st.empty()  # Place un conteneur pour les logs
-st.title("Test Spinner")
 
-
-st.success("Done!")
 if uploaded_file is not None:
     # Save the uploaded file to a temporary location
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as temp_file:
