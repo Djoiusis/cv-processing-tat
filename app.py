@@ -34,8 +34,9 @@ if uploaded_file is not None:
 
     st.write("File uploaded successfully!")
     try:
-  
-        candidate_data = process_cv(temp_file_path)
+
+         with st.spinner("Processing the CV..."):
+             candidate_data = process_cv(temp_file_path)
      
         # logs = get_logs()
         # print("Current logs:", logs)
