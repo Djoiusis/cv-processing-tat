@@ -14,7 +14,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 col1, col2 = st.columns([3, 1])  # Create two columns for layout
 with col1:
-    st.title("CV Processing App")  # Add your title
+    st.title("CV Processing Ap")  # Add your title
     st.write("Upload a PDF file to process the CV")
 with col2:
     st.image("logo.png", width=150)  # Add your logo
