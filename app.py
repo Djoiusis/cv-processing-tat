@@ -14,9 +14,12 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Initialize session state
-if "processed" not in st.session_state:
-    st.session_state["processed"] = False  # Whether the CV has been processed
-    st.session_state["file_path"] = None  # Path to the processed file
+if "uploaded_file" not in st.session_state:
+    st.session_state["uploaded_file"] = None
+if "processed_file" not in st.session_state:
+    st.session_state["processed_file"] = None  # Path to the processed CV
+if "logs" not in st.session_state:
+    st.session_state["logs"] = ""
 
 col1, col2 = st.columns([3, 1])  # Create two columns for layout
 with col1:
@@ -29,33 +32,42 @@ with col2:
 uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
 
 if uploaded_file is not None:
-    # Save the uploaded file to a temporary location
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as temp_file:
-        temp_file.write(uploaded_file.read())
-        temp_file_path = temp_file.name  # Get the temporary file path
+    # Check if a new file has been uploaded
+    if uploaded_file != st.session_state["uploaded_file"]:
+        # Save the uploaded file to a temporary location
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as temp_file:
+            temp_file.write(uploaded_file.read())
+            temp_file_path = temp_file.name  # Get the temporary file path
 
-    st.write("File uploaded successfully!")
+        st.session_state["uploaded_file"] = uploaded_file
+        st.session_state["processed_file"] = None  # Reset processed file state
 
-    # Check if the CV has already been processed
-    if not st.session_state["processed"]:
+        st.write("File uploaded successfully!")
+
+        # Process the new CV
         with st.spinner("Processing the CV, please wait..."):
             try:
-                # Call the processing function and update session state
                 processed_file_path = process_cv(temp_file_path)
-                st.session_state["processed"] = True
-                st.session_state["file_path"] = processed_file_path
-                st.success("CV processed successfully. The file will be downloaded automatically.")
+                st.session_state["processed_file"] = processed_file_path
+                st.success("CV processed successfully.")
             except Exception as e:
                 st.error(f"Error during processing: {e}")
-    else:
-        st.write("The CV has already been processed. You can download the file below:")
+                st.session_state["logs"] = get_logs()
 
-    # Display download link if the file is ready
-    if st.session_state["file_path"]:
-        with open(st.session_state["file_path"], "rb") as processed_file:
-            st.download_button(
-                label="Download Processed CV",
-                data=processed_file,
-                file_name="Processed_CV.docx",
-                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-            )
+# If a file has been processed, display the download button
+if st.session_state["processed_file"]:
+    with open(st.session_state["processed_file"], "rb") as processed_file:
+        st.download_button(
+            label="Download Processed CV",
+            data=processed_file,
+            file_name="Processed_CV.docx",
+            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        )
+
+# Display logs (optional)
+st.write("### Error Logs")
+logs = st.session_state["logs"] if "logs" in st.session_state else get_logs()
+if logs.strip():
+    st.text_area("Logs", logs, height=300)
+else:
+    st.write("No logs to display.")
